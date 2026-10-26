@@ -1,0 +1,1423 @@
+{
+  "source": "NGO_Packages_Kreatif_Atelier.xlsx",
+  "currency": "INR",
+  "policyNotes": {
+    "packagesSheet": "Prices exclude GST. Third-party costs (ad spend, WhatsApp message fees, printing, travel, flight permissions, hosting, software licences) are funded by the NGO.",
+    "addOnsSheet": "List prices exclude GST. Discount by removing scope, never by cutting the rate. Unit prices are shown in blue because they are the inputs the Quote builder reads.",
+    "quoteBuilder": "All figures exclude GST. Media spend, WhatsApp message fees, printing, venue, travel, flight permissions, hosting and software licences are additional and funded by the NGO.",
+    "tierScopeRule": "Anything beyond the tier quantities is quoted from the Add-ons sheet."
+  },
+  "tiers": [
+    {
+      "tier": "SILVER",
+      "name": "Silver",
+      "monthlyPriceInr": 15000,
+      "gstExtra": true,
+      "bestFor": "Small NGO, under 5 staff, needs to be visible",
+      "primaryObjective": "Presence and consistency",
+      "platformsManaged": "2 — Instagram, Facebook",
+      "postsPerMonth": 4,
+      "reelsPerMonth": "2, up to 30s",
+      "includedServices": [
+        {
+          "code": "DM-01",
+          "qualifier": null
+        },
+        {
+          "code": "FM-04",
+          "qualifier": null
+        },
+        {
+          "code": "FM-24",
+          "qualifier": "limited"
+        }
+      ],
+      "attributes": {
+        "Monthly price (₹)": 15000,
+        "Best for": "Small NGO, under 5 staff, needs to be visible",
+        "Primary objective served": "Presence and consistency",
+        "Aurelius codes included": "DM-01, FM-04, FM-24 (limited)",
+        "Platforms managed": "2 — Instagram, Facebook",
+        "Social posts per month": 4,
+        "Reels / short videos per month": "2, up to 30s",
+        "Content calendar": "Yes, simple list, by the 25th",
+        "Captions, hashtags, scheduling": "Included, cross-posted",
+        "Impact story (DM-24)": "Not included",
+        "Email newsletter (DM-07)": "Not included",
+        "WhatsApp broadcast (DM-10)": "Not included",
+        "Appeal asset set": "Not included",
+        "Full campaign kit": "Not included",
+        "On-page SEO (SEO-02)": "Not included",
+        "Google Business Profile (SEO-04)": "Not included",
+        "Donor lifecycle (DM-15)": "Not included",
+        "Live dashboard (AN-03)": "Not included",
+        "Monthly report": "1 page, activity summary",
+        "Meetings": "Monthly 30 min",
+        "Revision rounds": "1 per batch, batch-level only",
+        "Agency response time": "2 business days",
+        "NGO asset deadline": "18th of the prior month"
+      },
+      "deliverables": [
+        {
+          "name": "Content calendar (DM-01)",
+          "quantityText": "1",
+          "quantityNumeric": 1.0,
+          "formatAndScope": "Simple dated list of the month's posts, one approval",
+          "ngoSupplies": "Programme dates and events",
+          "workflow": "AL → NGO-A",
+          "outputMeasure": "Delivered by the 25th",
+          "exclusions": "Mid-month rewrites after approval",
+          "serviceCodes": [
+            "DM-01"
+          ],
+          "sortOrder": 1
+        },
+        {
+          "name": "Social posts (DM-01)",
+          "quantityText": "4",
+          "quantityNumeric": 4.0,
+          "formatAndScope": "Static and carousel from the template kit; one creative set cross-posted to both platforms",
+          "ngoSupplies": "Photos and programme facts, consent status",
+          "workflow": "CD → NGO-A → CD",
+          "outputMeasure": "Published count vs planned",
+          "exclusions": "Platform-specific variants, posts beyond 4",
+          "serviceCodes": [
+            "DM-01"
+          ],
+          "sortOrder": 2
+        },
+        {
+          "name": "Reels / short videos (FM-04, FM-24)",
+          "quantityText": "2",
+          "quantityNumeric": 2.0,
+          "formatAndScope": "Up to 30 seconds, simple edit of NGO-supplied footage, captioned",
+          "ngoSupplies": "Raw footage or photo sets",
+          "workflow": "CD → NGO-A → CD",
+          "outputMeasure": "Published count; views",
+          "exclusions": "Filming, motion graphics, music beyond the library",
+          "serviceCodes": [
+            "FM-04",
+            "FM-24"
+          ],
+          "sortOrder": 3
+        },
+        {
+          "name": "Platforms managed",
+          "quantityText": "2",
+          "quantityNumeric": 2.0,
+          "formatAndScope": "Instagram and Facebook",
+          "ngoSupplies": "Admin access via Business Suite roles",
+          "workflow": "CD",
+          "outputMeasure": "Posting consistency",
+          "exclusions": "Any third platform",
+          "serviceCodes": [],
+          "sortOrder": 4
+        },
+        {
+          "name": "Captions and hashtags",
+          "quantityText": "All posts",
+          "quantityNumeric": null,
+          "formatAndScope": "Written from the agreed caption framework; reusable hashtag sets",
+          "ngoSupplies": "Approved terminology and names",
+          "workflow": "CD → NGO-A",
+          "outputMeasure": "Part of batch approval",
+          "exclusions": "Per-caption rewriting after sign-off",
+          "serviceCodes": [],
+          "sortOrder": 5
+        },
+        {
+          "name": "Scheduling and publishing",
+          "quantityText": "All posts",
+          "quantityNumeric": null,
+          "formatAndScope": "Queued in the scheduling tool, published on the calendar dates",
+          "ngoSupplies": "Timely batch approval",
+          "workflow": "CD",
+          "outputMeasure": "On-time publishing rate",
+          "exclusions": "Mid-month reschedules",
+          "serviceCodes": [],
+          "sortOrder": 6
+        },
+        {
+          "name": "Monthly report",
+          "quantityText": "1",
+          "quantityNumeric": 1.0,
+          "formatAndScope": "1 page: what was published, reach, engagement rate, follower change, 2 observations",
+          "ngoSupplies": "—",
+          "workflow": "AL → NGO-A",
+          "outputMeasure": "Delivered by the 7th",
+          "exclusions": "KPI targets, SEO or website data, custom analysis",
+          "serviceCodes": [],
+          "sortOrder": 7
+        },
+        {
+          "name": "Meetings",
+          "quantityText": "1",
+          "quantityNumeric": 1.0,
+          "formatAndScope": "30-minute monthly call",
+          "ngoSupplies": "Attendance",
+          "workflow": "AL",
+          "outputMeasure": "Held on schedule",
+          "exclusions": "Ad-hoc calls, mid-month contact",
+          "serviceCodes": [],
+          "sortOrder": 8
+        }
+      ],
+      "scopeNote": "Anything beyond these quantities is quoted from the Add-ons sheet. Scope agreed with the agency, October 2026."
+    },
+    {
+      "tier": "GOLD",
+      "name": "Gold",
+      "monthlyPriceInr": 25000,
+      "gstExtra": true,
+      "bestFor": "Growing NGO, 5–20 staff, building credibility",
+      "primaryObjective": "Awareness and credibility",
+      "platformsManaged": "3 — Instagram, Facebook, LinkedIn",
+      "postsPerMonth": 8,
+      "reelsPerMonth": "4, up to 45s",
+      "includedServices": [
+        {
+          "code": "DM-01",
+          "qualifier": null
+        },
+        {
+          "code": "DM-07",
+          "qualifier": null
+        },
+        {
+          "code": "DM-24",
+          "qualifier": null
+        },
+        {
+          "code": "FM-04",
+          "qualifier": null
+        },
+        {
+          "code": "FM-24",
+          "qualifier": null
+        },
+        {
+          "code": "SEO-02",
+          "qualifier": "light"
+        },
+        {
+          "code": "SEO-04",
+          "qualifier": null
+        },
+        {
+          "code": "AN-03",
+          "qualifier": null
+        }
+      ],
+      "attributes": {
+        "Monthly price (₹)": 25000,
+        "Best for": "Growing NGO, 5–20 staff, building credibility",
+        "Primary objective served": "Awareness and credibility",
+        "Aurelius codes included": "DM-01, DM-07, DM-24, FM-04, FM-24, SEO-02 (light), SEO-04, AN-03",
+        "Platforms managed": "3 — Instagram, Facebook, LinkedIn",
+        "Social posts per month": 8,
+        "Reels / short videos per month": "4, up to 45s",
+        "Content calendar": "Yes, dated, by the 25th",
+        "Captions, hashtags, scheduling": "Included, platform-adapted",
+        "Impact story (DM-24)": "1 per month, 500–700 words",
+        "Email newsletter (DM-07)": "1 per month",
+        "WhatsApp broadcast (DM-10)": "Add-on",
+        "Appeal asset set": "1 per quarter",
+        "Full campaign kit": "Add-on",
+        "On-page SEO (SEO-02)": "2 pages per month",
+        "Google Business Profile (SEO-04)": "Light — 1 post, reviews",
+        "Donor lifecycle (DM-15)": "Not included",
+        "Live dashboard (AN-03)": "Yes, shared access",
+        "Monthly report": "2–3 pages, vs last month",
+        "Meetings": "Monthly 45 min",
+        "Revision rounds": "1 per batch",
+        "Agency response time": "1 business day",
+        "NGO asset deadline": "18th of the prior month"
+      },
+      "deliverables": [
+        {
+          "name": "Content calendar (DM-01)",
+          "quantityText": "1",
+          "quantityNumeric": 1.0,
+          "formatAndScope": "Dated grid of posts, reels and the monthly email, one approval",
+          "ngoSupplies": "Programme dates, events, festivals",
+          "workflow": "AL → NGO-A",
+          "outputMeasure": "Delivered by the 25th",
+          "exclusions": "Mid-month rewrites after approval",
+          "serviceCodes": [
+            "DM-01"
+          ],
+          "sortOrder": 1
+        },
+        {
+          "name": "Social posts (DM-01)",
+          "quantityText": "8",
+          "quantityNumeric": 8.0,
+          "formatAndScope": "Static and carousel from the template kit, adapted per platform",
+          "ngoSupplies": "Photos, programme facts, consent status",
+          "workflow": "CD → NGO-A → CD",
+          "outputMeasure": "Published count vs planned",
+          "exclusions": "Bespoke illustration, new formats, posts beyond 8",
+          "serviceCodes": [
+            "DM-01"
+          ],
+          "sortOrder": 2
+        },
+        {
+          "name": "Reels / short videos (FM-04, FM-24)",
+          "quantityText": "4",
+          "quantityNumeric": 4.0,
+          "formatAndScope": "Up to 45 seconds, edited from NGO-supplied footage, captioned",
+          "ngoSupplies": "Raw footage or photo sets",
+          "workflow": "CD → NGO-A → CD",
+          "outputMeasure": "Published count; views",
+          "exclusions": "Filming, voice-over, animation",
+          "serviceCodes": [
+            "FM-04",
+            "FM-24"
+          ],
+          "sortOrder": 3
+        },
+        {
+          "name": "Platforms managed",
+          "quantityText": "3",
+          "quantityNumeric": 3.0,
+          "formatAndScope": "Instagram, Facebook, LinkedIn",
+          "ngoSupplies": "Admin access via Business Suite roles",
+          "workflow": "CD",
+          "outputMeasure": "Posting consistency",
+          "exclusions": "Any fourth platform",
+          "serviceCodes": [],
+          "sortOrder": 4
+        },
+        {
+          "name": "Impact story (DM-24)",
+          "quantityText": "1",
+          "quantityNumeric": 1.0,
+          "formatAndScope": "500–700 words for the website, atomised into 1 post and the newsletter",
+          "ngoSupplies": "Programme data, quotes, consent",
+          "workflow": "CD → NGO-A → CMS",
+          "outputMeasure": "Published; sessions",
+          "exclusions": "Fieldwork, interviews by the agency",
+          "serviceCodes": [
+            "DM-24"
+          ],
+          "sortOrder": 5
+        },
+        {
+          "name": "Supporter newsletter (DM-07)",
+          "quantityText": "1",
+          "quantityNumeric": 1.0,
+          "formatAndScope": "Templated email, refilled monthly, single send",
+          "ngoSupplies": "Contact list, consent basis, platform",
+          "workflow": "CD → NGO-A → AL sends",
+          "outputMeasure": "Delivered; opens and clicks",
+          "exclusions": "List building, platform fees",
+          "serviceCodes": [
+            "DM-07"
+          ],
+          "sortOrder": 6
+        },
+        {
+          "name": "Appeal asset set",
+          "quantityText": "1 per quarter",
+          "quantityNumeric": null,
+          "formatAndScope": "3 creatives plus copy for one donation, volunteer or event ask",
+          "ngoSupplies": "The ask and the landing URL",
+          "workflow": "CD → NGO-A → CD",
+          "outputMeasure": "Click-through to the tracked page",
+          "exclusions": "Donation page build, ad spend",
+          "serviceCodes": [],
+          "sortOrder": 7
+        },
+        {
+          "name": "On-page SEO (SEO-02)",
+          "quantityText": "2 pages",
+          "quantityNumeric": null,
+          "formatAndScope": "Titles, meta descriptions, headings, call-to-action copy",
+          "ngoSupplies": "CMS access or publishing contact",
+          "workflow": "AL → NGO-A → AL",
+          "outputMeasure": "Impressions and clicks",
+          "exclusions": "Technical SEO, speed, migrations",
+          "serviceCodes": [
+            "SEO-02"
+          ],
+          "sortOrder": 8
+        },
+        {
+          "name": "Google Business Profile (SEO-04)",
+          "quantityText": "Ongoing, light",
+          "quantityNumeric": null,
+          "formatAndScope": "1 profile post, photo refresh, review responses",
+          "ngoSupplies": "Hours, address, photos",
+          "workflow": "AL",
+          "outputMeasure": "Profile views and actions",
+          "exclusions": "Review removal, dispute resolution",
+          "serviceCodes": [
+            "SEO-04"
+          ],
+          "sortOrder": 9
+        },
+        {
+          "name": "Dashboard access (AN-03)",
+          "quantityText": "Continuous",
+          "quantityNumeric": null,
+          "formatAndScope": "Shared Looker Studio dashboard on client-owned sources",
+          "ngoSupplies": "Analytics access",
+          "workflow": "AL",
+          "outputMeasure": "Uptime; data freshness",
+          "exclusions": "Custom modelling, offline data entry",
+          "serviceCodes": [
+            "AN-03"
+          ],
+          "sortOrder": 10
+        },
+        {
+          "name": "Monthly report",
+          "quantityText": "1",
+          "quantityNumeric": 1.0,
+          "formatAndScope": "2–3 pages: deliverables vs plan, core KPIs vs last month, 3 actions",
+          "ngoSupplies": "Offline donation and volunteer numbers",
+          "workflow": "AL → QC → NGO-A",
+          "outputMeasure": "Delivered by the 7th",
+          "exclusions": "Board presentations, custom analysis",
+          "serviceCodes": [],
+          "sortOrder": 11
+        },
+        {
+          "name": "Meetings",
+          "quantityText": "1",
+          "quantityNumeric": 1.0,
+          "formatAndScope": "45-minute monthly review call",
+          "ngoSupplies": "Attendance by a decision-maker",
+          "workflow": "AL",
+          "outputMeasure": "Held on schedule",
+          "exclusions": "Ad-hoc calls, mid-month check-in",
+          "serviceCodes": [],
+          "sortOrder": 12
+        }
+      ],
+      "scopeNote": "Anything beyond these quantities is quoted from the Add-ons sheet. Scope agreed with the agency, October 2026."
+    },
+    {
+      "tier": "PLATINUM",
+      "name": "Platinum",
+      "monthlyPriceInr": 40000,
+      "gstExtra": true,
+      "bestFor": "Established NGO, 15–60 staff, funders to report to",
+      "primaryObjective": "Donations, volunteers and CSR partnerships",
+      "platformsManaged": "4 — Instagram, Facebook, LinkedIn, YouTube Shorts",
+      "postsPerMonth": 16,
+      "reelsPerMonth": "6, up to 60s",
+      "includedServices": [
+        {
+          "code": "DM-01",
+          "qualifier": null
+        },
+        {
+          "code": "DM-04",
+          "qualifier": null
+        },
+        {
+          "code": "DM-06",
+          "qualifier": null
+        },
+        {
+          "code": "DM-07",
+          "qualifier": null
+        },
+        {
+          "code": "DM-10",
+          "qualifier": null
+        },
+        {
+          "code": "DM-15",
+          "qualifier": null
+        },
+        {
+          "code": "DM-24",
+          "qualifier": null
+        },
+        {
+          "code": "FM-04",
+          "qualifier": null
+        },
+        {
+          "code": "FM-24",
+          "qualifier": null
+        },
+        {
+          "code": "SEO-02",
+          "qualifier": null
+        },
+        {
+          "code": "SEO-04",
+          "qualifier": null
+        },
+        {
+          "code": "AN-03",
+          "qualifier": null
+        }
+      ],
+      "attributes": {
+        "Monthly price (₹)": 40000,
+        "Best for": "Established NGO, 15–60 staff, funders to report to",
+        "Primary objective served": "Donations, volunteers and CSR partnerships",
+        "Aurelius codes included": "DM-01, DM-04, DM-06, DM-07, DM-10, DM-15, DM-24, FM-04, FM-24, SEO-02, SEO-04, AN-03",
+        "Platforms managed": "4 — Instagram, Facebook, LinkedIn, YouTube Shorts",
+        "Social posts per month": 16,
+        "Reels / short videos per month": "6, up to 60s",
+        "Content calendar": "Yes, dated, by the 25th",
+        "Captions, hashtags, scheduling": "Included, platform-adapted",
+        "Impact story (DM-24)": "1 per month, 700–900 words",
+        "Email newsletter (DM-07)": "1 per month",
+        "WhatsApp broadcast (DM-10)": "1 per month",
+        "Appeal asset set": "1 per month",
+        "Full campaign kit": "1 per quarter",
+        "On-page SEO (SEO-02)": "4 pages per month",
+        "Google Business Profile (SEO-04)": "Managed — 2 posts, reviews, Q&A",
+        "Donor lifecycle (DM-15)": "Maintained",
+        "Live dashboard (AN-03)": "Yes, continuous",
+        "Monthly report": "4–5 pages, vs targets and vs last month",
+        "Meetings": "Monthly 45 min + mid-month 30 min + quarterly 90 min",
+        "Revision rounds": "2 per batch",
+        "Agency response time": "1 business day",
+        "NGO asset deadline": "18th of the prior month"
+      },
+      "deliverables": [
+        {
+          "name": "Content calendar (DM-01)",
+          "quantityText": "1",
+          "quantityNumeric": 1.0,
+          "formatAndScope": "Dated grid of every post, reel, email and campaign for the coming month, one approval",
+          "ngoSupplies": "Programme dates, events, festivals, funder milestones",
+          "workflow": "AL → NGO-A",
+          "outputMeasure": "Delivered by the 25th",
+          "exclusions": "Mid-month rewrites after approval",
+          "serviceCodes": [
+            "DM-01"
+          ],
+          "sortOrder": 1
+        },
+        {
+          "name": "Social posts (DM-01)",
+          "quantityText": "16",
+          "quantityNumeric": 16.0,
+          "formatAndScope": "Static and carousel from the locked BR-17 template kit, sized per platform",
+          "ngoSupplies": "Photos, programme facts, consent status",
+          "workflow": "CD → NGO-A → CD",
+          "outputMeasure": "Published count vs planned",
+          "exclusions": "Bespoke illustration, new template formats, per-post redesign, posts beyond 16",
+          "serviceCodes": [
+            "DM-01"
+          ],
+          "sortOrder": 2
+        },
+        {
+          "name": "Reels / short videos (FM-04, FM-24)",
+          "quantityText": "6",
+          "quantityNumeric": 6.0,
+          "formatAndScope": "Up to 60 seconds, edited from NGO footage; captions, licensed music, light motion",
+          "ngoSupplies": "Raw footage or photo sets",
+          "workflow": "CD → NGO-A → CD",
+          "outputMeasure": "Published count; views, completion",
+          "exclusions": "Filming, voice-over artists, animation beyond light motion",
+          "serviceCodes": [
+            "FM-04",
+            "FM-24"
+          ],
+          "sortOrder": 3
+        },
+        {
+          "name": "Short-form video strategy (DM-06)",
+          "quantityText": "Ongoing",
+          "quantityNumeric": null,
+          "formatAndScope": "Hooks, formats and posting cadence chosen deliberately rather than per post",
+          "ngoSupplies": "Programme context",
+          "workflow": "AL",
+          "outputMeasure": "Format performance review",
+          "exclusions": "Production beyond the 6 reels",
+          "serviceCodes": [
+            "DM-06"
+          ],
+          "sortOrder": 4
+        },
+        {
+          "name": "Platforms managed",
+          "quantityText": "4",
+          "quantityNumeric": 4.0,
+          "formatAndScope": "Instagram, Facebook, LinkedIn, YouTube Shorts — adapted per platform, not blind cross-posting",
+          "ngoSupplies": "Admin access via Business Suite roles",
+          "workflow": "CD",
+          "outputMeasure": "Posting consistency per platform",
+          "exclusions": "Any fifth platform",
+          "serviceCodes": [],
+          "sortOrder": 5
+        },
+        {
+          "name": "Impact story (DM-24)",
+          "quantityText": "1",
+          "quantityNumeric": 1.0,
+          "formatAndScope": "700–900 words for the website, atomised into 2 posts and the newsletter",
+          "ngoSupplies": "Programme data, quotes, documented consent",
+          "workflow": "CD → NGO-A → CMS",
+          "outputMeasure": "Published; sessions, time on page",
+          "exclusions": "Fieldwork, interviews conducted by the agency",
+          "serviceCodes": [
+            "DM-24"
+          ],
+          "sortOrder": 6
+        },
+        {
+          "name": "Supporter newsletter (DM-07)",
+          "quantityText": "1",
+          "quantityNumeric": 1.0,
+          "formatAndScope": "Templated HTML email, built once and refilled monthly",
+          "ngoSupplies": "Contact list, consent basis, sending platform",
+          "workflow": "CD → NGO-A → AL sends",
+          "outputMeasure": "Delivered; opens and clicks",
+          "exclusions": "List building, platform fees, re-permissioning",
+          "serviceCodes": [
+            "DM-07"
+          ],
+          "sortOrder": 7
+        },
+        {
+          "name": "WhatsApp broadcast (DM-10)",
+          "quantityText": "1",
+          "quantityNumeric": 1.0,
+          "formatAndScope": "One approved broadcast to opted-in supporters or volunteers",
+          "ngoSupplies": "Opted-in list, Business account",
+          "workflow": "AL → NGO-A → AL",
+          "outputMeasure": "Delivered; read and reply rate",
+          "exclusions": "Conversation handling, replies, message fees",
+          "serviceCodes": [
+            "DM-10"
+          ],
+          "sortOrder": 8
+        },
+        {
+          "name": "LinkedIn / CSR visibility (DM-04)",
+          "quantityText": "4 of the 16 posts",
+          "quantityNumeric": null,
+          "formatAndScope": "Posts angled at CSR and institutional audiences",
+          "ngoSupplies": "Partnership news, compliance credentials",
+          "workflow": "CD → NGO-A → CD",
+          "outputMeasure": "Decision-maker reach; page views",
+          "exclusions": "Outbound messaging to CSR contacts",
+          "serviceCodes": [
+            "DM-04"
+          ],
+          "sortOrder": 9
+        },
+        {
+          "name": "Appeal asset set",
+          "quantityText": "1",
+          "quantityNumeric": 1.0,
+          "formatAndScope": "3 creatives plus copy for one donation, volunteer or event ask",
+          "ngoSupplies": "The ask, the target, the landing URL",
+          "workflow": "CD → NGO-A → CD",
+          "outputMeasure": "Click-through to the tracked page",
+          "exclusions": "Donation page build, payment setup, ad spend",
+          "serviceCodes": [],
+          "sortOrder": 10
+        },
+        {
+          "name": "Full campaign kit",
+          "quantityText": "1 per quarter",
+          "quantityNumeric": null,
+          "formatAndScope": "Landing-page copy, 6 creatives, 2 emails, UTM plan, post-campaign readout",
+          "ngoSupplies": "Campaign goal, dates, page access",
+          "workflow": "AL + CD → NGO-A → AL",
+          "outputMeasure": "Tracked conversions on the campaign journey",
+          "exclusions": "Page build, ad management, media spend",
+          "serviceCodes": [],
+          "sortOrder": 11
+        },
+        {
+          "name": "On-page SEO (SEO-02)",
+          "quantityText": "4 pages",
+          "quantityNumeric": null,
+          "formatAndScope": "Titles, meta descriptions, headings, internal links, call-to-action copy",
+          "ngoSupplies": "CMS access or a publishing contact",
+          "workflow": "AL → NGO-A → AL",
+          "outputMeasure": "Impressions and clicks",
+          "exclusions": "Technical SEO, page speed, migrations",
+          "serviceCodes": [
+            "SEO-02"
+          ],
+          "sortOrder": 12
+        },
+        {
+          "name": "Google Business Profile (SEO-04)",
+          "quantityText": "Ongoing",
+          "quantityNumeric": null,
+          "formatAndScope": "2 profile posts, photo refresh, Q&A and review responses",
+          "ngoSupplies": "Hours, address, photos",
+          "workflow": "AL → NGO-A → AL",
+          "outputMeasure": "Profile views, calls, direction requests",
+          "exclusions": "Review removal, duplicate-listing recovery",
+          "serviceCodes": [
+            "SEO-04"
+          ],
+          "sortOrder": 13
+        },
+        {
+          "name": "Donor lifecycle upkeep (DM-15)",
+          "quantityText": "Ongoing",
+          "quantityNumeric": null,
+          "formatAndScope": "Upkeep of the thank-you, receipt and re-ask sequence built at setup",
+          "ngoSupplies": "Donor platform access",
+          "workflow": "AL",
+          "outputMeasure": "Sequence health; repeat-gift rate",
+          "exclusions": "The initial build, donor data entry, receipting compliance",
+          "serviceCodes": [
+            "DM-15"
+          ],
+          "sortOrder": 14
+        },
+        {
+          "name": "Live dashboard (AN-03)",
+          "quantityText": "Continuous",
+          "quantityNumeric": null,
+          "formatAndScope": "Looker Studio dashboard on client-owned data sources",
+          "ngoSupplies": "Analytics and platform access",
+          "workflow": "AL",
+          "outputMeasure": "Uptime; data freshness",
+          "exclusions": "New data sources, custom modelling",
+          "serviceCodes": [
+            "AN-03"
+          ],
+          "sortOrder": 15
+        },
+        {
+          "name": "Monthly report",
+          "quantityText": "1",
+          "quantityNumeric": 1.0,
+          "formatAndScope": "4–5 pages: deliverables vs plan, KPIs vs last month and vs target, 3–5 actions",
+          "ngoSupplies": "Offline donation and volunteer numbers",
+          "workflow": "AL → QC → NGO-A",
+          "outputMeasure": "Delivered by the 7th",
+          "exclusions": "Board presentations, custom analysis",
+          "serviceCodes": [],
+          "sortOrder": 16
+        },
+        {
+          "name": "Meetings",
+          "quantityText": "2 + quarterly",
+          "quantityNumeric": null,
+          "formatAndScope": "45-min monthly review, 30-min mid-month check-in, 90-min quarterly strategy",
+          "ngoSupplies": "Attendance by a decision-maker",
+          "workflow": "AL",
+          "outputMeasure": "Held on schedule",
+          "exclusions": "Ad-hoc calls, NGO internal or board meetings",
+          "serviceCodes": [],
+          "sortOrder": 17
+        }
+      ],
+      "scopeNote": "Anything beyond these quantities is quoted from the Add-ons sheet. Scope agreed with the agency, October 2026."
+    }
+  ],
+  "addOns": [
+    {
+      "kind": "RECURRING",
+      "name": "Additional 4 social posts",
+      "serviceCodes": [
+        "DM-01"
+      ],
+      "unitPriceInr": 3000,
+      "priceIsFrom": false,
+      "billingBasis": "MONTHLY",
+      "unitLabel": null,
+      "basisNotes": "Per month, on top of the tier count",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 1
+    },
+    {
+      "kind": "RECURRING",
+      "name": "Additional 2 reels or short videos",
+      "serviceCodes": [
+        "FM-04",
+        "FM-24"
+      ],
+      "unitPriceInr": 4000,
+      "priceIsFrom": false,
+      "billingBasis": "MONTHLY",
+      "unitLabel": null,
+      "basisNotes": "Per month",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 2
+    },
+    {
+      "kind": "RECURRING",
+      "name": "Additional platform managed",
+      "serviceCodes": [
+        "DM-01"
+      ],
+      "unitPriceInr": 3000,
+      "priceIsFrom": false,
+      "billingBasis": "MONTHLY",
+      "unitLabel": null,
+      "basisNotes": "Per month, per platform",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 3
+    },
+    {
+      "kind": "RECURRING",
+      "name": "Short-form video growth strategy (added to Gold)",
+      "serviceCodes": [
+        "DM-06"
+      ],
+      "unitPriceInr": 4000,
+      "priceIsFrom": false,
+      "billingBasis": "MONTHLY",
+      "unitLabel": null,
+      "basisNotes": "Per month",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 4
+    },
+    {
+      "kind": "RECURRING",
+      "name": "WhatsApp broadcasts (added to Gold)",
+      "serviceCodes": [
+        "DM-10"
+      ],
+      "unitPriceInr": 3500,
+      "priceIsFrom": false,
+      "billingBasis": "MONTHLY",
+      "unitLabel": null,
+      "basisNotes": "Per month, plus platform message fees funded by the NGO",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": "Per month, plus platform message fees funded by the NGO",
+      "requiresEligibilityCheck": false,
+      "sortOrder": 5
+    },
+    {
+      "kind": "RECURRING",
+      "name": "Extra email campaign beyond the monthly newsletter",
+      "serviceCodes": [
+        "DM-07"
+      ],
+      "unitPriceInr": 3500,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "each",
+      "basisNotes": "Each",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 6
+    },
+    {
+      "kind": "RECURRING",
+      "name": "Marketing automation upkeep",
+      "serviceCodes": [
+        "DM-08"
+      ],
+      "unitPriceInr": 4000,
+      "priceIsFrom": false,
+      "billingBasis": "MONTHLY",
+      "unitLabel": null,
+      "basisNotes": "Per month, after the build",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 7
+    },
+    {
+      "kind": "RECURRING",
+      "name": "AI content system upkeep",
+      "serviceCodes": [
+        "TP-12"
+      ],
+      "unitPriceInr": 5000,
+      "priceIsFrom": false,
+      "billingBasis": "MONTHLY",
+      "unitLabel": null,
+      "basisNotes": "Per month, after the build",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 8
+    },
+    {
+      "kind": "RECURRING",
+      "name": "Local volunteer and donor lead generation",
+      "serviceCodes": [
+        "LG-14"
+      ],
+      "unitPriceInr": 8000,
+      "priceIsFrom": false,
+      "billingBasis": "MONTHLY",
+      "unitLabel": null,
+      "basisNotes": "Per month",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 9
+    },
+    {
+      "kind": "RECURRING",
+      "name": "Google Ad Grant management",
+      "serviceCodes": [
+        "AD-01"
+      ],
+      "unitPriceInr": 12000,
+      "priceIsFrom": false,
+      "billingBasis": "MONTHLY",
+      "unitLabel": null,
+      "basisNotes": "Per month. Verify grant eligibility and policy compliance before selling",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": true,
+      "sortOrder": 10
+    },
+    {
+      "kind": "RECURRING",
+      "name": "Meta Ads management",
+      "serviceCodes": [
+        "AD-03"
+      ],
+      "unitPriceInr": 10000,
+      "priceIsFrom": false,
+      "billingBasis": "MONTHLY",
+      "unitLabel": null,
+      "basisNotes": "Per month, or 18% of spend if higher. Media spend funded by the NGO",
+      "percentOfSpendAlt": 18,
+      "thirdPartyCostNote": "Per month, or 18% of spend if higher. Media spend funded by the NGO",
+      "requiresEligibilityCheck": false,
+      "sortOrder": 11
+    },
+    {
+      "kind": "RECURRING",
+      "name": "Fractional CMO and growth advisory, 8 hours",
+      "serviceCodes": [
+        "AV-06"
+      ],
+      "unitPriceInr": 25000,
+      "priceIsFrom": false,
+      "billingBasis": "MONTHLY",
+      "unitLabel": null,
+      "basisNotes": "Per month",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 12
+    },
+    {
+      "kind": "RECURRING",
+      "name": "Additional revision round",
+      "serviceCodes": [],
+      "unitPriceInr": 2000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "each",
+      "basisNotes": "Each",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 13
+    },
+    {
+      "kind": "RECURRING",
+      "name": "Additional strategy meeting",
+      "serviceCodes": [],
+      "unitPriceInr": 1500,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "each",
+      "basisNotes": "Each",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 14
+    },
+    {
+      "kind": "SETUP",
+      "name": "Social media design system (required before Platinum)",
+      "serviceCodes": [
+        "BR-17"
+      ],
+      "unitPriceInr": 32000,
+      "priceIsFrom": false,
+      "billingBasis": "ONE_TIME",
+      "unitLabel": null,
+      "basisNotes": "One-time",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 15
+    },
+    {
+      "kind": "SETUP",
+      "name": "Logo design",
+      "serviceCodes": [
+        "BR-03"
+      ],
+      "unitPriceInr": 25000,
+      "priceIsFrom": false,
+      "billingBasis": "ONE_TIME",
+      "unitLabel": null,
+      "basisNotes": "One-time",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 16
+    },
+    {
+      "kind": "SETUP",
+      "name": "Brand story and message house",
+      "serviceCodes": [
+        "BR-11"
+      ],
+      "unitPriceInr": 30000,
+      "priceIsFrom": false,
+      "billingBasis": "ONE_TIME",
+      "unitLabel": null,
+      "basisNotes": "One-time",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 17
+    },
+    {
+      "kind": "SETUP",
+      "name": "Analytics and conversion tracking setup",
+      "serviceCodes": [
+        "AN-01",
+        "AN-02"
+      ],
+      "unitPriceInr": 22000,
+      "priceIsFrom": false,
+      "billingBasis": "ONE_TIME",
+      "unitLabel": null,
+      "basisNotes": "One-time",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 18
+    },
+    {
+      "kind": "SETUP",
+      "name": "Live dashboard build",
+      "serviceCodes": [
+        "AN-03"
+      ],
+      "unitPriceInr": 12000,
+      "priceIsFrom": false,
+      "billingBasis": "ONE_TIME",
+      "unitLabel": null,
+      "basisNotes": "One-time",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 19
+    },
+    {
+      "kind": "SETUP",
+      "name": "SEO audit and strategy",
+      "serviceCodes": [
+        "SEO-01"
+      ],
+      "unitPriceInr": 18000,
+      "priceIsFrom": false,
+      "billingBasis": "ONE_TIME",
+      "unitLabel": null,
+      "basisNotes": "One-time",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 20
+    },
+    {
+      "kind": "SETUP",
+      "name": "Marketing automation build",
+      "serviceCodes": [
+        "DM-08"
+      ],
+      "unitPriceInr": 20000,
+      "priceIsFrom": false,
+      "billingBasis": "ONE_TIME",
+      "unitLabel": null,
+      "basisNotes": "One-time",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 21
+    },
+    {
+      "kind": "SETUP",
+      "name": "Donor thank-you and re-ask sequence",
+      "serviceCodes": [
+        "DM-15"
+      ],
+      "unitPriceInr": 18000,
+      "priceIsFrom": false,
+      "billingBasis": "ONE_TIME",
+      "unitLabel": null,
+      "basisNotes": "One-time",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 22
+    },
+    {
+      "kind": "SETUP",
+      "name": "AI content system setup",
+      "serviceCodes": [
+        "TP-12"
+      ],
+      "unitPriceInr": 25000,
+      "priceIsFrom": false,
+      "billingBasis": "ONE_TIME",
+      "unitLabel": null,
+      "basisNotes": "One-time",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 23
+    },
+    {
+      "kind": "SETUP",
+      "name": "Google Ad Grant eligibility check and account setup",
+      "serviceCodes": [
+        "AD-01"
+      ],
+      "unitPriceInr": 15000,
+      "priceIsFrom": false,
+      "billingBasis": "ONE_TIME",
+      "unitLabel": null,
+      "basisNotes": "One-time",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 24
+    },
+    {
+      "kind": "SETUP",
+      "name": "Lead magnet, per asset",
+      "serviceCodes": [
+        "LG-08"
+      ],
+      "unitPriceInr": 12000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "asset",
+      "basisNotes": "Per asset",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 25
+    },
+    {
+      "kind": "SETUP",
+      "name": "Marketing technology consulting",
+      "serviceCodes": [
+        "AV-03"
+      ],
+      "unitPriceInr": 20000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "engagement",
+      "basisNotes": "Per engagement",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 26
+    },
+    {
+      "kind": "SETUP",
+      "name": "Staff social media training, half day",
+      "serviceCodes": [
+        "AV-04"
+      ],
+      "unitPriceInr": 15000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "session",
+      "basisNotes": "Per session",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 27
+    },
+    {
+      "kind": "PROJECT",
+      "name": "Donate or volunteer page rebuild",
+      "serviceCodes": [
+        "LG-06"
+      ],
+      "unitPriceInr": 35000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "project",
+      "basisNotes": "Per project",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 28
+    },
+    {
+      "kind": "PROJECT",
+      "name": "UI/UX design, up to 8 screens",
+      "serviceCodes": [
+        "TP-01"
+      ],
+      "unitPriceInr": 45000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "project",
+      "basisNotes": "Per project",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 29
+    },
+    {
+      "kind": "PROJECT",
+      "name": "Website build, up to 8 pages",
+      "serviceCodes": [
+        "TP-02"
+      ],
+      "unitPriceInr": 85000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "project",
+      "basisNotes": "Per project",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 30
+    },
+    {
+      "kind": "PROJECT",
+      "name": "Donation funnel engineering",
+      "serviceCodes": [
+        "TP-08"
+      ],
+      "unitPriceInr": 40000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "project",
+      "basisNotes": "Per project",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 31
+    },
+    {
+      "kind": "PROJECT",
+      "name": "AI chatbot or assistant",
+      "serviceCodes": [
+        "TP-06"
+      ],
+      "unitPriceInr": 35000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "project",
+      "basisNotes": "Per project, plus hosting",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": "Per project, plus hosting",
+      "requiresEligibilityCheck": false,
+      "sortOrder": 32
+    },
+    {
+      "kind": "PROJECT",
+      "name": "AI automation and agents",
+      "serviceCodes": [
+        "TP-05"
+      ],
+      "unitPriceInr": 50000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "project",
+      "basisNotes": "Per project",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 33
+    },
+    {
+      "kind": "PROJECT",
+      "name": "Mobile app development",
+      "serviceCodes": [
+        "TP-03"
+      ],
+      "unitPriceInr": 250000,
+      "priceIsFrom": true,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "project",
+      "basisNotes": "From. Challenge the need before quoting",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 34
+    },
+    {
+      "kind": "PROJECT",
+      "name": "Testimonial or case-study film",
+      "serviceCodes": [
+        "FM-15"
+      ],
+      "unitPriceInr": 30000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "film",
+      "basisNotes": "Per film",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 35
+    },
+    {
+      "kind": "PROJECT",
+      "name": "Explainer or motion-graphics video, up to 60s",
+      "serviceCodes": [
+        "FM-16"
+      ],
+      "unitPriceInr": 25000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "video",
+      "basisNotes": "Per video",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 36
+    },
+    {
+      "kind": "PROJECT",
+      "name": "Drone and aerial cinematography",
+      "serviceCodes": [
+        "FM-13"
+      ],
+      "unitPriceInr": 18000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "day",
+      "basisNotes": "Per day. Airspace and site permissions obtained by the NGO",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": "Per day. Airspace and site permissions obtained by the NGO",
+      "requiresEligibilityCheck": false,
+      "sortOrder": 37
+    },
+    {
+      "kind": "PROJECT",
+      "name": "Event coverage",
+      "serviceCodes": [
+        "FM-12"
+      ],
+      "unitPriceInr": 20000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "day",
+      "basisNotes": "Per day, plus travel",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": "Per day, plus travel",
+      "requiresEligibilityCheck": false,
+      "sortOrder": 38
+    },
+    {
+      "kind": "PROJECT",
+      "name": "Annual impact report design",
+      "serviceCodes": [
+        "BR-23"
+      ],
+      "unitPriceInr": 60000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "report",
+      "basisNotes": "Per report",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": null,
+      "requiresEligibilityCheck": false,
+      "sortOrder": 39
+    },
+    {
+      "kind": "PROJECT",
+      "name": "Press release written and distributed",
+      "serviceCodes": [
+        "PR-02"
+      ],
+      "unitPriceInr": 10000,
+      "priceIsFrom": false,
+      "billingBasis": "PER_UNIT",
+      "unitLabel": "release",
+      "basisNotes": "Per release, plus distribution costs",
+      "percentOfSpendAlt": null,
+      "thirdPartyCostNote": "Per release, plus distribution costs",
+      "requiresEligibilityCheck": false,
+      "sortOrder": 40
+    }
+  ],
+  "quoteBuilder": {
+    "defaultTier": "Gold",
+    "defaultMonths": 12,
+    "instruction": "EDIT ONLY THE YELLOW CELLS: the tier in B4, the months in B6, and a quantity in column E below. Every other cell is a formula.",
+    "footnote": "All figures exclude GST. Media spend, WhatsApp message fees, printing, venue, travel, flight permissions, hosting and software licences are additional and funded by the NGO.",
+    "formulas": {
+      "monthlyRetainer": "price of selected tier",
+      "recurringAddOnsPerMonth": "sum(unit price x qty) for category Recurring",
+      "oneTimeSetup": "sum(unit price x qty) for category Setup",
+      "projects": "sum(unit price x qty) for category Project",
+      "month1Invoice": "retainer + recurring + setup + projects",
+      "ongoingMonthlyInvoice": "retainer + recurring",
+      "totalContractValue": "(retainer + recurring) x months + setup + projects"
+    }
+  },
+  "internalEconomics": {
+    "visibility": "INTERNAL_ONLY",
+    "warning": "INTERNAL. Never share with a client. Hours are agency estimates built from assumed task durations, not verified costs — replace them with time-tracking data after two months of live delivery.",
+    "assumptions": {
+      "blendedCostPerProductiveHourInr": 350,
+      "productiveHoursPerPersonPerMonth": 120,
+      "hoursBufferFraction": 0.1,
+      "fixedMonthlyOverheadInr": 120000
+    },
+    "byTier": [
+      {
+        "tier": "SILVER",
+        "estimatedHoursTotal": 9.45,
+        "hoursBreakdown": {
+          "strategyAccountMgmt": 1.25,
+          "designContentProduction": 4.2,
+          "publishingSeoOptimisation": 0.75,
+          "reportingMeetings": 2.0,
+          "qcAdminComms": 1.25
+        },
+        "softwareAndAssetsInr": 350
+      },
+      {
+        "tier": "GOLD",
+        "estimatedHoursTotal": 22.8,
+        "hoursBreakdown": {
+          "strategyAccountMgmt": 2.5,
+          "designContentProduction": 12.3,
+          "publishingSeoOptimisation": 3.25,
+          "reportingMeetings": 2.75,
+          "qcAdminComms": 2.0
+        },
+        "softwareAndAssetsInr": 500
+      },
+      {
+        "tier": "PLATINUM",
+        "estimatedHoursTotal": 38.25,
+        "hoursBreakdown": {
+          "strategyAccountMgmt": 3.5,
+          "designContentProduction": 20.5,
+          "publishingSeoOptimisation": 7.5,
+          "reportingMeetings": 4.25,
+          "qcAdminComms": 2.5
+        },
+        "softwareAndAssetsInr": 600
+      }
+    ]
+  }
+}

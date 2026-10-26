@@ -1,0 +1,1354 @@
+{
+  "source": "Aurelius-Service-Catalogue.pdf",
+  "internalLabel": "Aurelius",
+  "publicName": "Kreatif Atelier",
+  "totalServices": 206,
+  "practiceAreas": [
+    {
+      "code": "DM",
+      "name": "Digital Marketing",
+      "tagline": "Owning attention across every channel a buyer touches.",
+      "isExpansionPractice": false,
+      "expectedServiceCount": 29,
+      "services": [
+        {
+          "code": "DM-01",
+          "name": "Organic Social Growth",
+          "sourcePage": 2,
+          "sortOrder": 1
+        },
+        {
+          "code": "DM-02",
+          "name": "Paid Social Campaigns",
+          "sourcePage": 2,
+          "sortOrder": 2
+        },
+        {
+          "code": "DM-03",
+          "name": "Instagram Growth Strategy",
+          "sourcePage": 2,
+          "sortOrder": 3
+        },
+        {
+          "code": "DM-04",
+          "name": "LinkedIn B2B Marketing",
+          "sourcePage": 2,
+          "sortOrder": 4
+        },
+        {
+          "code": "DM-05",
+          "name": "YouTube Channel Growth",
+          "sourcePage": 2,
+          "sortOrder": 5
+        },
+        {
+          "code": "DM-06",
+          "name": "Short-Form Video Growth",
+          "sourcePage": 2,
+          "sortOrder": 6
+        },
+        {
+          "code": "DM-07",
+          "name": "Email Marketing",
+          "sourcePage": 2,
+          "sortOrder": 7
+        },
+        {
+          "code": "DM-08",
+          "name": "Marketing Automation",
+          "sourcePage": 2,
+          "sortOrder": 8
+        },
+        {
+          "code": "DM-09",
+          "name": "CRM Marketing & Segmentation",
+          "sourcePage": 2,
+          "sortOrder": 9
+        },
+        {
+          "code": "DM-10",
+          "name": "WhatsApp Marketing",
+          "sourcePage": 2,
+          "sortOrder": 10
+        },
+        {
+          "code": "DM-11",
+          "name": "Community Building",
+          "sourcePage": 2,
+          "sortOrder": 11
+        },
+        {
+          "code": "DM-12",
+          "name": "Influencer Marketing",
+          "sourcePage": 2,
+          "sortOrder": 12
+        },
+        {
+          "code": "DM-13",
+          "name": "Creator & Nano Programs",
+          "sourcePage": 2,
+          "sortOrder": 13
+        },
+        {
+          "code": "DM-14",
+          "name": "Product Launch Campaigns",
+          "sourcePage": 2,
+          "sortOrder": 14
+        },
+        {
+          "code": "DM-15",
+          "name": "Retention & Lifecycle Marketing",
+          "sourcePage": 2,
+          "sortOrder": 15
+        },
+        {
+          "code": "DM-16",
+          "name": "Performance Marketing",
+          "sourcePage": 2,
+          "sortOrder": 16
+        },
+        {
+          "code": "DM-17",
+          "name": "Affiliate & Partnership Marketing",
+          "sourcePage": 2,
+          "sortOrder": 17
+        },
+        {
+          "code": "DM-18",
+          "name": "Conversion Rate Optimization",
+          "sourcePage": 2,
+          "sortOrder": 18
+        },
+        {
+          "code": "DM-19",
+          "name": "Mobile App Marketing",
+          "sourcePage": 2,
+          "sortOrder": 19
+        },
+        {
+          "code": "DM-20",
+          "name": "Marketplace Marketing",
+          "sourcePage": 2,
+          "sortOrder": 20
+        },
+        {
+          "code": "DM-21",
+          "name": "Geo-Targeted Marketing",
+          "sourcePage": 2,
+          "sortOrder": 21
+        },
+        {
+          "code": "DM-22",
+          "name": "AI Marketing Automation",
+          "sourcePage": 2,
+          "sortOrder": 22
+        },
+        {
+          "code": "DM-23",
+          "name": "Account-Based Marketing",
+          "sourcePage": 2,
+          "sortOrder": 23
+        },
+        {
+          "code": "DM-24",
+          "name": "Content Marketing & Editorial",
+          "sourcePage": 2,
+          "sortOrder": 24
+        },
+        {
+          "code": "DM-25",
+          "name": "Podcast Marketing",
+          "sourcePage": 2,
+          "sortOrder": 25
+        },
+        {
+          "code": "DM-26",
+          "name": "Loyalty & Referral Programs",
+          "sourcePage": 2,
+          "sortOrder": 26
+        },
+        {
+          "code": "DM-27",
+          "name": "Fractional CMO Retainer",
+          "sourcePage": 2,
+          "sortOrder": 27
+        },
+        {
+          "code": "DM-28",
+          "name": "Newsletter Growth",
+          "sourcePage": 2,
+          "sortOrder": 28
+        },
+        {
+          "code": "DM-29",
+          "name": "SMS Marketing",
+          "sourcePage": 2,
+          "sortOrder": 29
+        }
+      ],
+      "sortOrder": 1
+    },
+    {
+      "code": "PR",
+      "name": "Public Relations",
+      "tagline": "Earning trust, credibility, and share of conversation.",
+      "isExpansionPractice": false,
+      "expectedServiceCount": 17,
+      "services": [
+        {
+          "code": "PR-01",
+          "name": "Media Relations & Press Outreach",
+          "sourcePage": 3,
+          "sortOrder": 1
+        },
+        {
+          "code": "PR-02",
+          "name": "Press Release Writing & Distribution",
+          "sourcePage": 3,
+          "sortOrder": 2
+        },
+        {
+          "code": "PR-03",
+          "name": "Crisis Communications",
+          "sourcePage": 3,
+          "sortOrder": 3
+        },
+        {
+          "code": "PR-04",
+          "name": "Executive Thought Leadership",
+          "sourcePage": 3,
+          "sortOrder": 4
+        },
+        {
+          "code": "PR-05",
+          "name": "Founder Personal Branding",
+          "sourcePage": 3,
+          "sortOrder": 5
+        },
+        {
+          "code": "PR-06",
+          "name": "Corporate Communications",
+          "sourcePage": 3,
+          "sortOrder": 6
+        },
+        {
+          "code": "PR-07",
+          "name": "Investor & Financial PR",
+          "sourcePage": 3,
+          "sortOrder": 7
+        },
+        {
+          "code": "PR-08",
+          "name": "Product Launch PR",
+          "sourcePage": 3,
+          "sortOrder": 8
+        },
+        {
+          "code": "PR-09",
+          "name": "Digital PR for SEO",
+          "sourcePage": 3,
+          "sortOrder": 9
+        },
+        {
+          "code": "PR-10",
+          "name": "Award & Recognition Management",
+          "sourcePage": 3,
+          "sortOrder": 10
+        },
+        {
+          "code": "PR-11",
+          "name": "Event PR & Press Conferences",
+          "sourcePage": 3,
+          "sortOrder": 11
+        },
+        {
+          "code": "PR-12",
+          "name": "Internal Communications",
+          "sourcePage": 3,
+          "sortOrder": 12
+        },
+        {
+          "code": "PR-13",
+          "name": "ESG & Sustainability Comms",
+          "sourcePage": 3,
+          "sortOrder": 13
+        },
+        {
+          "code": "PR-14",
+          "name": "Online Reputation Management",
+          "sourcePage": 3,
+          "sortOrder": 14
+        },
+        {
+          "code": "PR-15",
+          "name": "Media Training",
+          "sourcePage": 3,
+          "sortOrder": 15
+        },
+        {
+          "code": "PR-16",
+          "name": "Newsjacking & Reactive PR",
+          "sourcePage": 3,
+          "sortOrder": 16
+        },
+        {
+          "code": "PR-17",
+          "name": "Analyst Relations",
+          "sourcePage": 3,
+          "sortOrder": 17
+        }
+      ],
+      "sortOrder": 2
+    },
+    {
+      "code": "PRO",
+      "name": "Promotions",
+      "tagline": "Turning attention into action through incentives and live moments.",
+      "isExpansionPractice": false,
+      "expectedServiceCount": 14,
+      "services": [
+        {
+          "code": "PRO-01",
+          "name": "Sales Promotion Campaigns",
+          "sourcePage": 4,
+          "sortOrder": 1
+        },
+        {
+          "code": "PRO-02",
+          "name": "Contest & Giveaway Management",
+          "sourcePage": 4,
+          "sortOrder": 2
+        },
+        {
+          "code": "PRO-03",
+          "name": "Sampling & Trial Programs",
+          "sourcePage": 4,
+          "sortOrder": 3
+        },
+        {
+          "code": "PRO-04",
+          "name": "Retail & In-Store Activation",
+          "sourcePage": 4,
+          "sortOrder": 4
+        },
+        {
+          "code": "PRO-05",
+          "name": "Experiential & Brand Activation",
+          "sourcePage": 4,
+          "sortOrder": 5
+        },
+        {
+          "code": "PRO-06",
+          "name": "Pop-Up Experiences",
+          "sourcePage": 4,
+          "sortOrder": 6
+        },
+        {
+          "code": "PRO-07",
+          "name": "Trade Show & Exhibition Management",
+          "sourcePage": 4,
+          "sortOrder": 7
+        },
+        {
+          "code": "PRO-08",
+          "name": "Sponsorship Activation",
+          "sourcePage": 4,
+          "sortOrder": 8
+        },
+        {
+          "code": "PRO-09",
+          "name": "Festive & Seasonal Campaigns",
+          "sourcePage": 4,
+          "sortOrder": 9
+        },
+        {
+          "code": "PRO-10",
+          "name": "Roadshows & Mall Activations",
+          "sourcePage": 4,
+          "sortOrder": 10
+        },
+        {
+          "code": "PRO-11",
+          "name": "Gamified Promotions",
+          "sourcePage": 4,
+          "sortOrder": 11
+        },
+        {
+          "code": "PRO-12",
+          "name": "Cashback & Rewards Campaigns",
+          "sourcePage": 4,
+          "sortOrder": 12
+        },
+        {
+          "code": "PRO-13",
+          "name": "Channel & Dealer Incentives",
+          "sourcePage": 4,
+          "sortOrder": 13
+        },
+        {
+          "code": "PRO-14",
+          "name": "Loyalty Program Design",
+          "sourcePage": 4,
+          "sortOrder": 14
+        }
+      ],
+      "sortOrder": 3
+    },
+    {
+      "code": "SEO",
+      "name": "Search Engine Optimization",
+      "tagline": "Compounding organic visibility across search and AI engines.",
+      "isExpansionPractice": false,
+      "expectedServiceCount": 20,
+      "services": [
+        {
+          "code": "SEO-01",
+          "name": "SEO Audit & Strategy",
+          "sourcePage": 5,
+          "sortOrder": 1
+        },
+        {
+          "code": "SEO-02",
+          "name": "On-Page SEO",
+          "sourcePage": 5,
+          "sortOrder": 2
+        },
+        {
+          "code": "SEO-03",
+          "name": "Technical SEO",
+          "sourcePage": 5,
+          "sortOrder": 3
+        },
+        {
+          "code": "SEO-04",
+          "name": "Local SEO & Google Business Profile",
+          "sourcePage": 5,
+          "sortOrder": 4
+        },
+        {
+          "code": "SEO-05",
+          "name": "E-commerce SEO",
+          "sourcePage": 5,
+          "sortOrder": 5
+        },
+        {
+          "code": "SEO-06",
+          "name": "Content SEO & Topic Clusters",
+          "sourcePage": 5,
+          "sortOrder": 6
+        },
+        {
+          "code": "SEO-07",
+          "name": "Link Building & Off-Page SEO",
+          "sourcePage": 5,
+          "sortOrder": 7
+        },
+        {
+          "code": "SEO-08",
+          "name": "International & Multilingual SEO",
+          "sourcePage": 5,
+          "sortOrder": 8
+        },
+        {
+          "code": "SEO-09",
+          "name": "Enterprise SEO",
+          "sourcePage": 5,
+          "sortOrder": 9
+        },
+        {
+          "code": "SEO-10",
+          "name": "SaaS SEO",
+          "sourcePage": 5,
+          "sortOrder": 10
+        },
+        {
+          "code": "SEO-11",
+          "name": "Programmatic SEO",
+          "sourcePage": 5,
+          "sortOrder": 11
+        },
+        {
+          "code": "SEO-12",
+          "name": "Answer Engine Optimization",
+          "sourcePage": 5,
+          "sortOrder": 12
+        },
+        {
+          "code": "SEO-13",
+          "name": "Schema & Structured Data",
+          "sourcePage": 5,
+          "sortOrder": 13
+        },
+        {
+          "code": "SEO-14",
+          "name": "Core Web Vitals & Speed",
+          "sourcePage": 5,
+          "sortOrder": 14
+        },
+        {
+          "code": "SEO-15",
+          "name": "SEO Migration Management",
+          "sourcePage": 5,
+          "sortOrder": 15
+        },
+        {
+          "code": "SEO-16",
+          "name": "Video & YouTube SEO",
+          "sourcePage": 5,
+          "sortOrder": 16
+        },
+        {
+          "code": "SEO-17",
+          "name": "Penalty Recovery & Disavow",
+          "sourcePage": 5,
+          "sortOrder": 17
+        },
+        {
+          "code": "SEO-18",
+          "name": "Marketplace SEO",
+          "sourcePage": 5,
+          "sortOrder": 18
+        },
+        {
+          "code": "SEO-19",
+          "name": "B2B & Manufacturing SEO",
+          "sourcePage": 5,
+          "sortOrder": 19
+        },
+        {
+          "code": "SEO-20",
+          "name": "SEO Content Production",
+          "sourcePage": 5,
+          "sortOrder": 20
+        }
+      ],
+      "sortOrder": 4
+    },
+    {
+      "code": "BR",
+      "name": "Branding & Creative Design",
+      "tagline": "Building the identity, system, and story a brand is recognised by.",
+      "isExpansionPractice": false,
+      "expectedServiceCount": 25,
+      "services": [
+        {
+          "code": "BR-01",
+          "name": "Brand Strategy",
+          "sourcePage": 6,
+          "sortOrder": 1
+        },
+        {
+          "code": "BR-02",
+          "name": "Brand Identity System",
+          "sourcePage": 6,
+          "sortOrder": 2
+        },
+        {
+          "code": "BR-03",
+          "name": "Logo Design",
+          "sourcePage": 6,
+          "sortOrder": 3
+        },
+        {
+          "code": "BR-04",
+          "name": "Brand Positioning & Architecture",
+          "sourcePage": 6,
+          "sortOrder": 4
+        },
+        {
+          "code": "BR-05",
+          "name": "Naming & Verbal Identity",
+          "sourcePage": 6,
+          "sortOrder": 5
+        },
+        {
+          "code": "BR-06",
+          "name": "Brand Guidelines",
+          "sourcePage": 6,
+          "sortOrder": 6
+        },
+        {
+          "code": "BR-07",
+          "name": "Rebranding & Brand Refresh",
+          "sourcePage": 6,
+          "sortOrder": 7
+        },
+        {
+          "code": "BR-08",
+          "name": "Packaging Design",
+          "sourcePage": 6,
+          "sortOrder": 8
+        },
+        {
+          "code": "BR-09",
+          "name": "Design System",
+          "sourcePage": 6,
+          "sortOrder": 9
+        },
+        {
+          "code": "BR-10",
+          "name": "Brand Messaging & Tone",
+          "sourcePage": 6,
+          "sortOrder": 10
+        },
+        {
+          "code": "BR-11",
+          "name": "Brand Story & Narrative",
+          "sourcePage": 6,
+          "sortOrder": 11
+        },
+        {
+          "code": "BR-12",
+          "name": "Pitch & Investor Deck Design",
+          "sourcePage": 6,
+          "sortOrder": 12
+        },
+        {
+          "code": "BR-13",
+          "name": "Presentation Template Systems",
+          "sourcePage": 6,
+          "sortOrder": 13
+        },
+        {
+          "code": "BR-14",
+          "name": "Print & Collateral Design",
+          "sourcePage": 6,
+          "sortOrder": 14
+        },
+        {
+          "code": "BR-15",
+          "name": "Signage & Environmental Graphics",
+          "sourcePage": 6,
+          "sortOrder": 15
+        },
+        {
+          "code": "BR-16",
+          "name": "Merchandise & Swag Design",
+          "sourcePage": 6,
+          "sortOrder": 16
+        },
+        {
+          "code": "BR-17",
+          "name": "Social Media Design Systems",
+          "sourcePage": 6,
+          "sortOrder": 17
+        },
+        {
+          "code": "BR-18",
+          "name": "Illustration & Iconography",
+          "sourcePage": 6,
+          "sortOrder": 18
+        },
+        {
+          "code": "BR-19",
+          "name": "Motion Brand Identity",
+          "sourcePage": 6,
+          "sortOrder": 19
+        },
+        {
+          "code": "BR-20",
+          "name": "Sonic Branding",
+          "sourcePage": 6,
+          "sortOrder": 20
+        },
+        {
+          "code": "BR-21",
+          "name": "Employer Brand Identity",
+          "sourcePage": 6,
+          "sortOrder": 21
+        },
+        {
+          "code": "BR-22",
+          "name": "Sub-Brand & Product Branding",
+          "sourcePage": 6,
+          "sortOrder": 22
+        },
+        {
+          "code": "BR-23",
+          "name": "Editorial & Publication Design",
+          "sourcePage": 6,
+          "sortOrder": 23
+        },
+        {
+          "code": "BR-24",
+          "name": "Brand Sprint & Workshops",
+          "sourcePage": 6,
+          "sortOrder": 24
+        },
+        {
+          "code": "BR-25",
+          "name": "Personal Brand Identity",
+          "sourcePage": 6,
+          "sortOrder": 25
+        }
+      ],
+      "sortOrder": 5
+    },
+    {
+      "code": "AD",
+      "name": "Advertising",
+      "tagline": "Paid media and creative designed to create measurable demand.",
+      "isExpansionPractice": false,
+      "expectedServiceCount": 24,
+      "services": [
+        {
+          "code": "AD-01",
+          "name": "Google Search Ads",
+          "sourcePage": 7,
+          "sortOrder": 1
+        },
+        {
+          "code": "AD-02",
+          "name": "Performance Max & Display",
+          "sourcePage": 7,
+          "sortOrder": 2
+        },
+        {
+          "code": "AD-03",
+          "name": "Meta Ads",
+          "sourcePage": 7,
+          "sortOrder": 3
+        },
+        {
+          "code": "AD-04",
+          "name": "YouTube & Video Ads",
+          "sourcePage": 7,
+          "sortOrder": 4
+        },
+        {
+          "code": "AD-05",
+          "name": "LinkedIn Ads",
+          "sourcePage": 7,
+          "sortOrder": 5
+        },
+        {
+          "code": "AD-06",
+          "name": "TikTok Ads",
+          "sourcePage": 7,
+          "sortOrder": 6
+        },
+        {
+          "code": "AD-07",
+          "name": "Programmatic & DSP",
+          "sourcePage": 7,
+          "sortOrder": 7
+        },
+        {
+          "code": "AD-08",
+          "name": "Native Advertising",
+          "sourcePage": 7,
+          "sortOrder": 8
+        },
+        {
+          "code": "AD-09",
+          "name": "OTT & Connected TV Ads",
+          "sourcePage": 7,
+          "sortOrder": 9
+        },
+        {
+          "code": "AD-10",
+          "name": "Out-of-Home (OOH)",
+          "sourcePage": 7,
+          "sortOrder": 10
+        },
+        {
+          "code": "AD-11",
+          "name": "Digital OOH (DOOH)",
+          "sourcePage": 7,
+          "sortOrder": 11
+        },
+        {
+          "code": "AD-12",
+          "name": "Audio & Spotify Ads",
+          "sourcePage": 7,
+          "sortOrder": 12
+        },
+        {
+          "code": "AD-13",
+          "name": "Retail Media & Amazon Ads",
+          "sourcePage": 7,
+          "sortOrder": 13
+        },
+        {
+          "code": "AD-14",
+          "name": "App Install / UA Campaigns",
+          "sourcePage": 7,
+          "sortOrder": 14
+        },
+        {
+          "code": "AD-15",
+          "name": "Creative Strategy & Concepting",
+          "sourcePage": 7,
+          "sortOrder": 15
+        },
+        {
+          "code": "AD-16",
+          "name": "Performance Creative Production",
+          "sourcePage": 7,
+          "sortOrder": 16
+        },
+        {
+          "code": "AD-17",
+          "name": "Media Planning & Buying",
+          "sourcePage": 7,
+          "sortOrder": 17
+        },
+        {
+          "code": "AD-18",
+          "name": "Geofencing & Location Ads",
+          "sourcePage": 7,
+          "sortOrder": 18
+        },
+        {
+          "code": "AD-19",
+          "name": "Remarketing & Retargeting",
+          "sourcePage": 7,
+          "sortOrder": 19
+        },
+        {
+          "code": "AD-20",
+          "name": "B2B Demand-Gen Advertising",
+          "sourcePage": 7,
+          "sortOrder": 20
+        },
+        {
+          "code": "AD-21",
+          "name": "Microsoft & Bing Ads",
+          "sourcePage": 7,
+          "sortOrder": 21
+        },
+        {
+          "code": "AD-22",
+          "name": "Niche Platform Ads",
+          "sourcePage": 7,
+          "sortOrder": 22
+        },
+        {
+          "code": "AD-23",
+          "name": "AI Ad Creative & Iteration",
+          "sourcePage": 7,
+          "sortOrder": 23
+        },
+        {
+          "code": "AD-24",
+          "name": "Influencer Whitelisting",
+          "sourcePage": 7,
+          "sortOrder": 24
+        }
+      ],
+      "sortOrder": 6
+    },
+    {
+      "code": "AN",
+      "name": "Analytics & Performance",
+      "tagline": "Turning marketing activity into measurable decisions and performance.",
+      "isExpansionPractice": false,
+      "expectedServiceCount": 15,
+      "services": [
+        {
+          "code": "AN-01",
+          "name": "GA4 Analytics Setup",
+          "sourcePage": 8,
+          "sortOrder": 1
+        },
+        {
+          "code": "AN-02",
+          "name": "Conversion Tracking & GTM",
+          "sourcePage": 8,
+          "sortOrder": 2
+        },
+        {
+          "code": "AN-03",
+          "name": "Marketing Dashboards",
+          "sourcePage": 8,
+          "sortOrder": 3
+        },
+        {
+          "code": "AN-04",
+          "name": "Attribution Modeling",
+          "sourcePage": 8,
+          "sortOrder": 4
+        },
+        {
+          "code": "AN-05",
+          "name": "Server-Side Tracking",
+          "sourcePage": 8,
+          "sortOrder": 5
+        },
+        {
+          "code": "AN-06",
+          "name": "Marketing Mix Modeling",
+          "sourcePage": 8,
+          "sortOrder": 6
+        },
+        {
+          "code": "AN-07",
+          "name": "Customer Data Platform Setup",
+          "sourcePage": 8,
+          "sortOrder": 7
+        },
+        {
+          "code": "AN-08",
+          "name": "A/B Testing Programs",
+          "sourcePage": 8,
+          "sortOrder": 8
+        },
+        {
+          "code": "AN-09",
+          "name": "Funnel & Cohort Analysis",
+          "sourcePage": 8,
+          "sortOrder": 9
+        },
+        {
+          "code": "AN-10",
+          "name": "Data Visualization",
+          "sourcePage": 8,
+          "sortOrder": 10
+        },
+        {
+          "code": "AN-11",
+          "name": "Rank & SEO Tracking",
+          "sourcePage": 8,
+          "sortOrder": 11
+        },
+        {
+          "code": "AN-12",
+          "name": "UX Analytics & Heatmaps",
+          "sourcePage": 8,
+          "sortOrder": 12
+        },
+        {
+          "code": "AN-13",
+          "name": "Predictive Analytics & LTV",
+          "sourcePage": 8,
+          "sortOrder": 13
+        },
+        {
+          "code": "AN-14",
+          "name": "Consent & Privacy Compliance",
+          "sourcePage": 8,
+          "sortOrder": 14
+        },
+        {
+          "code": "AN-15",
+          "name": "RevOps Analytics",
+          "sourcePage": 8,
+          "sortOrder": 15
+        }
+      ],
+      "sortOrder": 7
+    },
+    {
+      "code": "LG",
+      "name": "Lead Generation & Growth",
+      "tagline": "Building repeatable systems that turn attention into qualified pipeline.",
+      "isExpansionPractice": false,
+      "expectedServiceCount": 19,
+      "services": [
+        {
+          "code": "LG-01",
+          "name": "B2B Lead Generation",
+          "sourcePage": 9,
+          "sortOrder": 1
+        },
+        {
+          "code": "LG-02",
+          "name": "Inbound Lead Generation",
+          "sourcePage": 9,
+          "sortOrder": 2
+        },
+        {
+          "code": "LG-03",
+          "name": "Cold Email Outbound",
+          "sourcePage": 9,
+          "sortOrder": 3
+        },
+        {
+          "code": "LG-04",
+          "name": "LinkedIn Outbound & Social Selling",
+          "sourcePage": 9,
+          "sortOrder": 4
+        },
+        {
+          "code": "LG-05",
+          "name": "Sales Funnel Design & Build",
+          "sourcePage": 9,
+          "sortOrder": 5
+        },
+        {
+          "code": "LG-06",
+          "name": "Lead-Gen Landing Page CRO",
+          "sourcePage": 9,
+          "sortOrder": 6
+        },
+        {
+          "code": "LG-07",
+          "name": "Webinar & Event Funnels",
+          "sourcePage": 9,
+          "sortOrder": 7
+        },
+        {
+          "code": "LG-08",
+          "name": "Lead Magnet Production",
+          "sourcePage": 9,
+          "sortOrder": 8
+        },
+        {
+          "code": "LG-09",
+          "name": "SDR-as-a-Service",
+          "sourcePage": 9,
+          "sortOrder": 9
+        },
+        {
+          "code": "LG-10",
+          "name": "CRM Setup & Pipeline",
+          "sourcePage": 9,
+          "sortOrder": 10
+        },
+        {
+          "code": "LG-11",
+          "name": "Lead Scoring & Qualification",
+          "sourcePage": 9,
+          "sortOrder": 11
+        },
+        {
+          "code": "LG-12",
+          "name": "Channel & Reseller Programs",
+          "sourcePage": 9,
+          "sortOrder": 12
+        },
+        {
+          "code": "LG-13",
+          "name": "High-Ticket Lead Gen",
+          "sourcePage": 9,
+          "sortOrder": 13
+        },
+        {
+          "code": "LG-14",
+          "name": "Local Service Lead Gen",
+          "sourcePage": 9,
+          "sortOrder": 14
+        },
+        {
+          "code": "LG-15",
+          "name": "AI Chatbot Lead Capture",
+          "sourcePage": 9,
+          "sortOrder": 15
+        },
+        {
+          "code": "LG-16",
+          "name": "Lead Nurturing Sequences",
+          "sourcePage": 9,
+          "sortOrder": 16
+        },
+        {
+          "code": "LG-17",
+          "name": "Demand Generation Strategy",
+          "sourcePage": 9,
+          "sortOrder": 17
+        },
+        {
+          "code": "LG-18",
+          "name": "Growth & GTM Audit",
+          "sourcePage": 9,
+          "sortOrder": 18
+        },
+        {
+          "code": "LG-19",
+          "name": "Marketplace & Directory Lead Gen",
+          "sourcePage": 9,
+          "sortOrder": 19
+        }
+      ],
+      "sortOrder": 8
+    },
+    {
+      "code": "FM",
+      "name": "Film, Video & Photography",
+      "tagline": "Production capabilities spanning brand, commercial, documentary, digital and visual content.",
+      "isExpansionPractice": false,
+      "expectedServiceCount": 24,
+      "services": [
+        {
+          "code": "FM-01",
+          "name": "Brand Film & Commercials",
+          "sourcePage": 10,
+          "sortOrder": 1
+        },
+        {
+          "code": "FM-02",
+          "name": "Corporate Video Production",
+          "sourcePage": 10,
+          "sortOrder": 2
+        },
+        {
+          "code": "FM-03",
+          "name": "Product Videography",
+          "sourcePage": 10,
+          "sortOrder": 3
+        },
+        {
+          "code": "FM-04",
+          "name": "Short-Form Video Production",
+          "sourcePage": 10,
+          "sortOrder": 4
+        },
+        {
+          "code": "FM-05",
+          "name": "Product Photography",
+          "sourcePage": 10,
+          "sortOrder": 5
+        },
+        {
+          "code": "FM-06",
+          "name": "Lifestyle & Editorial Photography",
+          "sourcePage": 10,
+          "sortOrder": 6
+        },
+        {
+          "code": "FM-07",
+          "name": "Fashion & Apparel Photography",
+          "sourcePage": 10,
+          "sortOrder": 7
+        },
+        {
+          "code": "FM-08",
+          "name": "Food & Beverage Photography",
+          "sourcePage": 10,
+          "sortOrder": 8
+        },
+        {
+          "code": "FM-09",
+          "name": "Architectural Photography",
+          "sourcePage": 10,
+          "sortOrder": 9
+        },
+        {
+          "code": "FM-10",
+          "name": "Industrial & Factory Photography",
+          "sourcePage": 10,
+          "sortOrder": 10
+        },
+        {
+          "code": "FM-11",
+          "name": "Corporate Headshots",
+          "sourcePage": 10,
+          "sortOrder": 11
+        },
+        {
+          "code": "FM-12",
+          "name": "Event Coverage",
+          "sourcePage": 10,
+          "sortOrder": 12
+        },
+        {
+          "code": "FM-13",
+          "name": "Drone & Aerial Cinematography",
+          "sourcePage": 10,
+          "sortOrder": 13
+        },
+        {
+          "code": "FM-14",
+          "name": "Documentary & Story Films",
+          "sourcePage": 10,
+          "sortOrder": 14
+        },
+        {
+          "code": "FM-15",
+          "name": "Testimonial & Case-Study Video",
+          "sourcePage": 10,
+          "sortOrder": 15
+        },
+        {
+          "code": "FM-16",
+          "name": "Explainer & Motion Graphics",
+          "sourcePage": 10,
+          "sortOrder": 16
+        },
+        {
+          "code": "FM-17",
+          "name": "2D & 3D Animation",
+          "sourcePage": 10,
+          "sortOrder": 17
+        },
+        {
+          "code": "FM-18",
+          "name": "Post-Production & Color",
+          "sourcePage": 10,
+          "sortOrder": 18
+        },
+        {
+          "code": "FM-19",
+          "name": "Photo Retouching & CGI",
+          "sourcePage": 10,
+          "sortOrder": 19
+        },
+        {
+          "code": "FM-20",
+          "name": "360 & Virtual Tours",
+          "sourcePage": 10,
+          "sortOrder": 20
+        },
+        {
+          "code": "FM-21",
+          "name": "Livestream Production",
+          "sourcePage": 10,
+          "sortOrder": 21
+        },
+        {
+          "code": "FM-22",
+          "name": "Podcast Video Production",
+          "sourcePage": 10,
+          "sortOrder": 22
+        },
+        {
+          "code": "FM-23",
+          "name": "UGC-Style Content Production",
+          "sourcePage": 10,
+          "sortOrder": 23
+        },
+        {
+          "code": "FM-24",
+          "name": "Reels & Shorts Retainer",
+          "sourcePage": 10,
+          "sortOrder": 24
+        }
+      ],
+      "sortOrder": 9
+    },
+    {
+      "code": "TP",
+      "name": "Technology & Product",
+      "tagline": "The digital product, automation and experience layer that extends the agency beyond communications.",
+      "isExpansionPractice": true,
+      "expectedServiceCount": 12,
+      "services": [
+        {
+          "code": "TP-01",
+          "name": "UI/UX Design",
+          "sourcePage": 11,
+          "sortOrder": 1
+        },
+        {
+          "code": "TP-02",
+          "name": "Web Development",
+          "sourcePage": 11,
+          "sortOrder": 2
+        },
+        {
+          "code": "TP-03",
+          "name": "Mobile App Development",
+          "sourcePage": 11,
+          "sortOrder": 3
+        },
+        {
+          "code": "TP-04",
+          "name": "Immersive Interactive Websites",
+          "sourcePage": 11,
+          "sortOrder": 4
+        },
+        {
+          "code": "TP-05",
+          "name": "AI Automation & Agents",
+          "sourcePage": 11,
+          "sortOrder": 5
+        },
+        {
+          "code": "TP-06",
+          "name": "AI Chatbots & Assistants",
+          "sourcePage": 11,
+          "sortOrder": 6
+        },
+        {
+          "code": "TP-07",
+          "name": "CRM & MarTech Integration",
+          "sourcePage": 11,
+          "sortOrder": 7
+        },
+        {
+          "code": "TP-08",
+          "name": "Sales Funnel Engineering",
+          "sourcePage": 11,
+          "sortOrder": 8
+        },
+        {
+          "code": "TP-09",
+          "name": "AR & VR Experiences",
+          "sourcePage": 11,
+          "sortOrder": 9
+        },
+        {
+          "code": "TP-10",
+          "name": "3D Product Visualization",
+          "sourcePage": 11,
+          "sortOrder": 10
+        },
+        {
+          "code": "TP-11",
+          "name": "Retail & Experience Design",
+          "sourcePage": 11,
+          "sortOrder": 11
+        },
+        {
+          "code": "TP-12",
+          "name": "AI Content Systems",
+          "sourcePage": 11,
+          "sortOrder": 12
+        }
+      ],
+      "sortOrder": 10
+    },
+    {
+      "code": "AV",
+      "name": "Advisory & Transformation",
+      "tagline": "Strategic advisory that connects marketing, customer experience, transformation and growth.",
+      "isExpansionPractice": true,
+      "expectedServiceCount": 7,
+      "services": [
+        {
+          "code": "AV-01",
+          "name": "Digital Transformation Consulting",
+          "sourcePage": 12,
+          "sortOrder": 1
+        },
+        {
+          "code": "AV-02",
+          "name": "Customer Experience Design",
+          "sourcePage": 12,
+          "sortOrder": 2
+        },
+        {
+          "code": "AV-03",
+          "name": "Marketing Technology Consulting",
+          "sourcePage": 12,
+          "sortOrder": 3
+        },
+        {
+          "code": "AV-04",
+          "name": "Corporate Training & Workshops",
+          "sourcePage": 12,
+          "sortOrder": 4
+        },
+        {
+          "code": "AV-05",
+          "name": "Employer Branding & EVP",
+          "sourcePage": 12,
+          "sortOrder": 5
+        },
+        {
+          "code": "AV-06",
+          "name": "Fractional CMO & Growth Advisory",
+          "sourcePage": 12,
+          "sortOrder": 6
+        },
+        {
+          "code": "AV-07",
+          "name": "Innovation & GTM Sprints",
+          "sourcePage": 12,
+          "sortOrder": 7
+        }
+      ],
+      "sortOrder": 11
+    }
+  ]
+}

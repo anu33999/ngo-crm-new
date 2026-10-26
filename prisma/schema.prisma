@@ -1,0 +1,805 @@
+// Kreatif Atelier — NGO Digital Intelligence & Outreach Platform
+//
+// Local dev uses SQLite. To move to PostgreSQL run `npm run db:use-postgres`
+// (see docs/DATABASE.md). The schema deliberately avoids SQLite-incompatible
+// features (no scalar lists, no @db.* native types) so the same models work on both;
+// list-like values are stored as Json.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// SQLite cannot store Json column defaults ("[]"/"{}"), so Json fields are optional and the code treats an empty value as [] / {}.
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// 1. SERVICE CATALOGUE  (source of truth: Aurelius-Service-Catalogue.pdf)
+// ════════════════════════════════════════════════════════════════════════════
+
+model PracticeArea {
+  id                  String             @id @default(cuid())
+  code                String             @unique // DM, PR, PRO, SEO, BR, AD, AN, LG, FM, TP, AV
+  name                String
+  tagline             String
+  isExpansionPractice Boolean            @default(false)
+  sortOrder           Int
+  services            ServiceCatalogue[]
+}
+
+/// One of the 206 catalogue services. `code` (e.g. SEO-04) is the stable identifier.
+model ServiceCatalogue {
+  id             String               @id @default(cuid())
+  code           String               @unique
+  practiceAreaId String
+  practiceArea   PracticeArea         @relation(fields: [practiceAreaId], references: [id])
+  name           String
+  sortOrder      Int
+  sourcePage     Int
+  /// Deliverables defined for this service in the NGO package workbook
+  /// ([{ tier, deliverable, quantity, formatAndScope, exclusions }]). Empty when the
+  /// workbook defines none — descriptions are never invented.
+  deliverables   Json?                 
+  isActive       Boolean              @default(true)
+  packageSlots   PackageInclusion[]
+  addOnLinks     AddOnService[]
+  policyRules    PolicyServiceRule[]
+  recommendations ServiceRecommendation[]
+
+  @@index([practiceAreaId])
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// 2. PACKAGES, ADD-ONS (source: NGO_Packages_Kreatif_Atelier.xlsx)
+// ════════════════════════════════════════════════════════════════════════════
+
+enum PackageTier {
+  SILVER
+  GOLD
+  PLATINUM
+}
+
+model Package {
+  id               String                     @id @default(cuid())
+  tier             PackageTier                @unique
+  name             String
+  monthlyPriceInr  Int
+  gstExtra         Boolean                    @default(true)
+  bestFor          String
+  primaryObjective String
+  platformsManaged String
+  postsPerMonth    Int
+  reelsPerMonth    String
+  /// Full label -> value grid from the workbook's Packages sheet.
+  attributes       Json
+  scopeNote        String?
+  inclusions       PackageInclusion[]
+  deliverables     PackageDeliverable[]
+  internalEconomics PackageInternalEconomics?
+}
+
+/// Which catalogue services a tier covers; `qualifier` keeps source wording such as "light" / "limited".
+model PackageInclusion {
+  id        String           @id @default(cuid())
+  packageId String
+  package   Package          @relation(fields: [packageId], references: [id], onDelete: Cascade)
+  serviceId String
+  service   ServiceCatalogue @relation(fields: [serviceId], references: [id])
+  qualifier String?
+
+  @@unique([packageId, serviceId])
+}
+
+model PackageDeliverable {
+  id             String   @id @default(cuid())
+  packageId      String
+  package        Package  @relation(fields: [packageId], references: [id], onDelete: Cascade)
+  name           String
+  quantityText   String?
+  quantityNumeric Float?
+  formatAndScope String?
+  ngoSupplies    String?
+  workflow       String?
+  outputMeasure  String?
+  exclusions     String?
+  /// Catalogue codes referenced in the deliverable name, e.g. ["FM-04","FM-24"].
+  serviceCodes   Json?     
+  sortOrder      Int
+
+  @@index([packageId])
+}
+
+enum AddOnKind {
+  RECURRING
+  SETUP
+  PROJECT
+}
+
+enum BillingBasis {
+  MONTHLY
+  ONE_TIME
+  PER_UNIT
+}
+
+model AddOn {
+  id                        String       @id @default(cuid())
+  kind                      AddOnKind
+  name                      String
+  unitPriceInr              Int
+  priceIsFrom               Boolean      @default(false)
+  billingBasis              BillingBasis
+  unitLabel                 String?
+  basisNotes                String
+  percentOfSpendAlt         Int?
+  thirdPartyCostNote        String?
+  requiresEligibilityCheck  Boolean      @default(false)
+  sortOrder                 Int
+  services                  AddOnService[]
+}
+
+model AddOnService {
+  addOnId   String
+  addOn     AddOn            @relation(fields: [addOnId], references: [id], onDelete: Cascade)
+  serviceId String
+  service   ServiceCatalogue @relation(fields: [serviceId], references: [id])
+
+  @@id([addOnId, serviceId])
+}
+
+/// INTERNAL ONLY. Never select this model in a client-facing query or export.
+model PackageInternalEconomics {
+  id                   String  @id @default(cuid())
+  packageId            String  @unique
+  package              Package @relation(fields: [packageId], references: [id], onDelete: Cascade)
+  estimatedHoursTotal  Float
+  hoursBreakdown       Json
+  softwareAndAssetsInr Int
+}
+
+/// INTERNAL ONLY. Workbook "Economics" assumptions (cost per hour, overhead, buffer).
+model InternalAssumption {
+  key       String  @id
+  valueNum  Float
+  note      String?
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// 3. PRICING POLICY  (configurable; nothing is quoted without an approved policy)
+// ════════════════════════════════════════════════════════════════════════════
+
+enum PricingModel {
+  STANDARD_PACKAGES      // quote the workbook's list prices
+  SUBSIDIZED_MAINTENANCE // NGO-support model: no professional fee for agreed scope + maintenance charge
+  CUSTOM
+}
+
+enum PolicyStatus {
+  DRAFT
+  APPROVED
+  RETIRED
+}
+
+enum PricingEligibility {
+  INCLUDED_IN_PACKAGE
+  ADD_ON
+  ONE_TIME_PROJECT
+  REQUIRES_APPROVAL
+  NOT_CONFIGURED
+}
+
+model PricingPolicy {
+  id                  String              @id @default(cuid())
+  name                String              @unique
+  model               PricingModel
+  status              PolicyStatus        @default(DRAFT)
+  isActive            Boolean             @default(false)
+  description         String?
+  currency            String              @default("INR")
+  gstExtra            Boolean             @default(true)
+  /// Third-party costs that stay payable by the NGO (ad spend, hosting, message fees, ...).
+  thirdPartyCostRules Json?                
+  /// Free-form, policy-specific settings (e.g. subsidy scope, maintenance fee rules).
+  config              Json?                
+  approvedBy          String?
+  approvedAt          DateTime?
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @updatedAt
+  serviceRules        PolicyServiceRule[]
+  pitches             OutreachPitch[]
+  proposals           Proposal[]
+}
+
+model PolicyServiceRule {
+  id          String             @id @default(cuid())
+  policyId    String
+  policy      PricingPolicy      @relation(fields: [policyId], references: [id], onDelete: Cascade)
+  serviceId   String
+  service     ServiceCatalogue   @relation(fields: [serviceId], references: [id])
+  eligibility PricingEligibility
+  /// Tiers (JSON array of "SILVER"/"GOLD"/"PLATINUM") that include the service, if any.
+  tiers       Json?               
+  note        String?
+
+  @@unique([policyId, serviceId])
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// 4. NGO + VERIFIED IDENTITY
+// ════════════════════════════════════════════════════════════════════════════
+
+enum IdentityStatus {
+  UNVERIFIED
+  AMBIGUOUS
+  CONFIRMED
+  REJECTED
+}
+
+model Ngo {
+  id               String            @id @default(cuid())
+  name             String
+  normalizedName   String
+  queryLocation    String?
+  country          String?
+  state            String?
+  city             String?
+  operatingRegions Json?              
+  mission          String?
+  primaryCause     String?
+  identityStatus   IdentityStatus    @default(UNVERIFIED)
+
+  // ── contact + location (directory / CRM) ─────────────────────────────────
+  website          String?
+  phone            String?
+  email            String?
+  address          String?
+  /// Neighbourhood, e.g. "Banjara Hills". `city` stays "Hyderabad" / "Secunderabad".
+  area             String?
+  latitude         Float?
+  longitude        Float?
+  /// How the coordinates were obtained: "area centroid (approximate)", "city centre (approximate)", "entered by team".
+  geoBasis         String?
+  /// Registration number exactly as shown on the NGO Darpan listing (not the Darpan unique ID).
+  darpanId         String?
+  /// Where the directory facts came from, e.g. "NGO Darpan listing, checked 21 Oct 2026". Null for researched/manual entries.
+  sourceNote       String?
+  /// VERIFIED | UNVERIFIED | NOT_FOUND | UNKNOWN — from the last audit (VERIFIED only when a government-registry page names the NGO).
+  darpanStatus     String            @default("UNKNOWN")
+  /// REACHABLE | NOT_FOUND_PUBLICLY | UNABLE_TO_ASSESS | NOT_AUDITED
+  websiteStatus    String            @default("NOT_AUDITED")
+  /// STARTER (unverified starter list) | DISCOVERED (from search, confirmed by a person) | MANUAL | SEARCH (researched by name) | IMPORT (spreadsheet)
+  source           String            @default("SEARCH")
+
+  // ── CRM pipeline (plain strings, validated in the app) ───────────────────
+  /// NOT_CONTACTED | CONTACTED | FOLLOW_UP_SCHEDULED
+  contactStatus    String            @default("NOT_CONTACTED")
+  /// PENDING | INTERESTED | UNINTERESTED | CONTRACT_SIGNED
+  interestStatus   String            @default("PENDING")
+  /// True once a person adds the NGO to "My NGOs".
+  inCrm            Boolean           @default(false)
+  notes            String?
+  followUpAt       DateTime?
+  /// Yes/No: a meeting is booked. meetingAt holds when, if known.
+  meetingScheduled Boolean           @default(false)
+  meetingAt        DateTime?
+  contactedAt      DateTime?
+  // ── profile fields (spreadsheet import / typed by the team); all optional free text ─────────────
+  organisationType String?
+  instagram        String?
+  contactPerson    String?
+  designation      String?
+  whatTheyDo       String?
+  beneficiaries    String?
+  currentProjects  String?
+  mainNeed         String?
+  canHelpWith      String?
+  potentialProject String?
+  partnershipValue String?
+  /// High | Medium | Low
+  priority         String?
+  nextAction       String?
+  /// Three short bullets derived from the audit (never invented).
+  pitchSummary     String?
+  /// JSON array of catalogue service codes matched by the audit.
+  matchedServiceCodes Json?           
+  lastResearchedAt DateTime?
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+
+  aliases          NgoAlias[]
+  crmNotes         CrmNote[]
+  identity         VerifiedIdentity?
+  domains          OfficialDomain[]
+  socialProfiles   SocialProfile[]
+  researchJobs     ResearchJob[]
+  evidence         EvidenceSource[]
+  findings         AuditFinding[]
+  assessments      MaturityAssessment[]
+  recommendations  ServiceRecommendation[]
+  pitches          OutreachPitch[]
+  proposals        Proposal[]
+  exports          ExportRecord[]
+
+  @@index([normalizedName])
+  @@index([city])
+  @@index([inCrm])
+}
+
+model CrmNote {
+  id        String   @id @default(cuid())
+  ngoId     String
+  ngo       Ngo      @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  content   String
+  author    String   @default("Kreatif Team")
+  createdAt DateTime @default(now())
+
+  @@index([ngoId])
+}
+
+model NgoAlias {
+  id    String @id @default(cuid())
+  ngoId String
+  ngo   Ngo    @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  alias String
+
+  @@unique([ngoId, alias])
+}
+
+enum ComplianceStatus {
+  NOT_APPLICABLE
+  VERIFIED
+  UNVERIFIED
+  NOT_FOUND // "not found in the sources checked" — never proof of non-compliance
+}
+
+/// The confirmed identity of an NGO. Registration identifiers are only ever filled from
+/// an official source; `*Status` is UNVERIFIED until one is found.
+model VerifiedIdentity {
+  id               String           @id @default(cuid())
+  ngoId            String           @unique
+  ngo              Ngo              @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  officialName     String
+  officialWebsite  String?
+  locations        Json?              // [{ city, state, country, type }]
+  leadership       Json?             
+  publicContacts   Json?             
+  relatedEntities  Json?             
+
+  status80G        ComplianceStatus @default(UNVERIFIED)
+  status12A        ComplianceStatus @default(UNVERIFIED)
+  statusFCRA       ComplianceStatus @default(UNVERIFIED)
+  statusCSR1       ComplianceStatus @default(UNVERIFIED)
+  statusDarpan     ComplianceStatus @default(UNVERIFIED)
+  registrationIds  Json?              // { darpanId, pan, fcraNumber, ... } — official sources only
+  complianceEvidenceIds Json?         // { "80G": "<EvidenceSource.id>", ... }
+  /// Full compliance items: [{ key, status, statement, evidenceUrls, officialLookup }]. Statements say exactly what was and was not established.
+  complianceDetail Json?           
+
+  matchSignals     Json?              // why this entity was judged to be the right one
+  confirmedBy      String?
+  confirmedAt      DateTime?
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+}
+
+model OfficialDomain {
+  id         String  @id @default(cuid())
+  ngoId      String
+  ngo        Ngo     @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  domain     String
+  confidence Float   @default(0)
+  isPrimary  Boolean @default(false)
+  basis      String? // why this domain was judged official
+
+  @@unique([ngoId, domain])
+}
+
+enum SocialPlatform {
+  INSTAGRAM
+  FACEBOOK
+  LINKEDIN
+  YOUTUBE
+  X
+  OTHER
+}
+
+enum SocialAccessState {
+  ACCESSIBLE
+  NOT_LOCATED
+  INACCESSIBLE // private / login wall / blocked: NOT evidence of inactivity
+}
+
+model SocialProfile {
+  id            String            @id @default(cuid())
+  ngoId         String
+  ngo           Ngo               @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  platform      SocialPlatform
+  url           String?
+  accessState   SocialAccessState
+  isOfficial    Boolean           @default(false)
+  lastPostAt    DateTime?
+  observations  Json?              
+  checkedAt     DateTime          @default(now())
+
+  @@unique([ngoId, platform, url])
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// 5. RESEARCH JOBS, SEARCH QUERIES, EVIDENCE
+// ════════════════════════════════════════════════════════════════════════════
+
+enum JobStatus {
+  QUEUED
+  RUNNING
+  AWAITING_DISAMBIGUATION
+  COMPLETED
+  PARTIAL
+  FAILED
+  CANCELLED
+}
+
+model ResearchJob {
+  id            String         @id @default(cuid())
+  ngoId         String?
+  ngo           Ngo?           @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  queryName     String
+  queryLocation String?
+  status        JobStatus      @default(QUEUED)
+  stage         String? // identify | discover | public-sources | audit | opportunities | match | pitch
+  progress      Int            @default(0)
+  stageLog      Json?           
+  candidates    Json?            // disambiguation options when identity is ambiguous
+  coverage      Json?            // source categories attempted / succeeded / failed + limitations
+  attempt       Int            @default(1)
+  isRefresh     Boolean        @default(false)
+  parentJobId   String?
+  error         String?
+  startedAt     DateTime?
+  finishedAt    DateTime?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  queries       SearchQuery[]
+  evidence      EvidenceSource[]
+  findings      AuditFinding[]
+  assessments   MaturityAssessment[]
+  pitches       OutreachPitch[]
+
+  @@index([ngoId])
+  @@index([status])
+}
+
+model SearchQuery {
+  id           String      @id @default(cuid())
+  jobId        String
+  job          ResearchJob @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  provider     String
+  query        String
+  resultCount  Int         @default(0)
+  ok           Boolean     @default(true)
+  error        String?
+  /// Trimmed provider response (URLs, titles, snippets) kept for reproducibility.
+  response     Json?
+  ranAt        DateTime    @default(now())
+}
+
+enum SourceType {
+  OFFICIAL_WEBSITE
+  OFFICIAL_SOCIAL
+  GOVERNMENT_REGISTRY
+  DIRECTORY
+  NEWS
+  ANNUAL_REPORT
+  SEARCH_RESULT
+  AUDIT_TOOL
+  USER_ADDED
+  OTHER
+}
+
+enum FetchStatus {
+  OK
+  FAILED
+  BLOCKED_BY_ROBOTS
+  REQUIRES_LOGIN
+  TIMEOUT
+  NOT_ATTEMPTED
+}
+
+enum Confidence {
+  HIGH
+  MEDIUM
+  LOW
+}
+
+model EvidenceSource {
+  id            String      @id @default(cuid())
+  ngoId         String
+  ngo           Ngo         @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  jobId         String?
+  job           ResearchJob? @relation(fields: [jobId], references: [id], onDelete: SetNull)
+  url           String
+  title         String?
+  sourceType    SourceType
+  isOfficial    Boolean     @default(false)
+  fetchStatus   FetchStatus @default(NOT_ATTEMPTED)
+  httpStatus    Int?
+  failureReason String?
+  /// Minimum extracted text needed to cite/reproduce a finding — not a full copy of the page.
+  snapshot      String?
+  summary       String?
+  excerpt       String?
+  contentHash   String?
+  confidence    Confidence  @default(MEDIUM)
+  publishedAt   DateTime?
+  checkedAt     DateTime    @default(now())
+  addedByUser   Boolean     @default(false)
+  findingLinks  FindingEvidence[]
+
+  @@index([ngoId])
+  @@index([jobId])
+  @@unique([ngoId, url])
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// 6. AUDIT FINDINGS (what they have / what they lack)
+// ════════════════════════════════════════════════════════════════════════════
+
+enum FindingSection {
+  EXISTING // Tab 1 — what the NGO already has
+  GAP      // Tab 2 — what the NGO appears to lack
+}
+
+enum FindingCategory {
+  WEBSITE
+  SEO
+  SOCIAL
+  COMPLIANCE
+  COMMUNICATIONS
+  BRAND
+  DONATION_VOLUNTEER
+  IMPACT_REPORTING
+  CONTENT_MEDIA
+  ANALYTICS
+  PRIVACY_ACCESSIBILITY
+  OTHER
+}
+
+/// The four evidence states. "NOT_FOUND_PUBLICLY" must never be rendered as "does not exist".
+enum GapState {
+  CONFIRMED_ISSUE
+  LIKELY_OPPORTUNITY
+  NOT_FOUND_PUBLICLY
+  UNABLE_TO_ASSESS
+}
+
+enum Assessment {
+  STRONG
+  ADEQUATE
+  NEEDS_IMPROVEMENT
+  UNKNOWN
+}
+
+enum Priority {
+  CRITICAL
+  HIGH
+  MEDIUM
+  LOW
+}
+
+enum ReviewStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  EXCLUDED // sensitive / inappropriate: never exported to NGO-facing output
+}
+
+model AuditFinding {
+  id                String          @id @default(cuid())
+  ngoId             String
+  ngo               Ngo             @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  jobId             String?
+  job               ResearchJob?    @relation(fields: [jobId], references: [id], onDelete: SetNull)
+  section           FindingSection
+  category          FindingCategory
+  /// Maturity-framework area (1 of 22, e.g. "Donation infrastructure").
+  frameworkArea     String?
+  /// Stable audit-signal id (e.g. "journey.donate") so area assessments can be rebuilt from stored findings.
+  signalKey         String?
+  title             String
+  observation       String
+  /// null for EXISTING findings (nothing to classify); one of the four evidence states for gaps.
+  gapState          GapState?
+  assessment        Assessment      @default(UNKNOWN)
+  whyItMatters      String?
+  consequence       String?
+  recommendedAction String?
+  confidence        Confidence
+  priority          Priority?
+  mayAddressOffline Boolean         @default(false)
+  pageUrl           String?
+  checkedAt         DateTime        @default(now())
+  reviewStatus      ReviewStatus    @default(PENDING)
+  reviewNote        String?
+  evidence          FindingEvidence[]
+  recommendations   ServiceRecommendation[]
+
+  @@index([ngoId, section])
+}
+
+model FindingEvidence {
+  findingId String
+  finding   AuditFinding   @relation(fields: [findingId], references: [id], onDelete: Cascade)
+  sourceId  String
+  source    EvidenceSource @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  excerpt   String?
+
+  @@id([findingId, sourceId])
+}
+
+model MaturityAssessment {
+  id                String      @id @default(cuid())
+  ngoId             String
+  ngo               Ngo         @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  jobId             String?
+  job               ResearchJob? @relation(fields: [jobId], references: [id], onDelete: SetNull)
+  /// null = "Not enough evidence" (never coerced to 0).
+  readinessScore    Int?
+  /// [{ category, score|null, evidenceIds[], note }]
+  categories        Json
+  opportunityScore  Int?
+  opportunityBreakdown Json?     
+  createdAt         DateTime    @default(now())
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// 7. SERVICE RECOMMENDATIONS
+// ════════════════════════════════════════════════════════════════════════════
+
+enum OpportunityLevel {
+  QUICK_WIN
+  CORE_IMPROVEMENT
+  LONG_TERM
+  DO_NOT_PITCH
+}
+
+enum ApprovalStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model ServiceRecommendation {
+  id                 String             @id @default(cuid())
+  ngoId              String
+  ngo                Ngo                @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  findingId          String?
+  finding            AuditFinding?      @relation(fields: [findingId], references: [id], onDelete: SetNull)
+  serviceId          String
+  service            ServiceCatalogue   @relation(fields: [serviceId], references: [id])
+  level              OpportunityLevel
+  reason             String
+  proposedDeliverables String
+  expectedOutcome    String?
+  successMetric      String?
+  priority           Priority
+  confidence         Confidence
+  effort             String?
+  ngoInputs          String?
+  thirdPartyDeps     String?
+  pricingEligibility PricingEligibility @default(NOT_CONFIGURED)
+  packageTier        PackageTier?
+  isOngoing          Boolean            @default(false)
+  approval           ApprovalStatus     @default(PENDING)
+  /// Human price override (INR). Only set by a person; never computed.
+  priceOverrideInr   Int?
+  priceOverrideBy    String?
+  priceOverrideNote  String?
+  /// Catalogue-independent snapshot of what the matcher produced (areaId, evidence URLs, level label ...).
+  snapshot           Json?               
+  createdAt          DateTime           @default(now())
+
+  @@index([ngoId])
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// 8. OUTREACH: PITCHES, DRAFTS, PROPOSALS, EXPORTS, AUDIT TRAIL
+// ════════════════════════════════════════════════════════════════════════════
+
+enum PitchChannel {
+  COLD_EMAIL
+  WHATSAPP
+  LINKEDIN
+  PHONE_SCRIPT
+  FOLLOW_UP_EMAIL
+  MEETING_REQUEST
+  ONE_PAGE_PROPOSAL
+  DISCOVERY_QUESTIONS
+}
+
+enum DraftStatus {
+  DRAFT
+  APPROVED
+  REJECTED
+}
+
+model OutreachPitch {
+  id            String        @id @default(cuid())
+  ngoId         String
+  ngo           Ngo           @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  jobId         String?
+  job           ResearchJob?  @relation(fields: [jobId], references: [id], onDelete: SetNull)
+  policyId      String?
+  policy        PricingPolicy? @relation(fields: [policyId], references: [id], onDelete: SetNull)
+  tone          String        @default("warm-professional")
+  version       Int           @default(1)
+  parentPitchId String?
+  /// 0–100; breakdown follows the rubric (specificity 25, evidence 25, relevance 20, value 15, CTA 10, tone 5).
+  scoreTotal    Int?
+  scoreBreakdown Json?         
+  status        DraftStatus   @default(DRAFT)
+  approvedBy    String?
+  approvedAt    DateTime?
+  createdAt     DateTime      @default(now())
+  drafts        PitchDraft[]
+
+  @@index([ngoId])
+}
+
+model PitchDraft {
+  id         String        @id @default(cuid())
+  pitchId    String
+  pitch      OutreachPitch @relation(fields: [pitchId], references: [id], onDelete: Cascade)
+  channel    PitchChannel
+  subject    String?
+  body       String
+  editedBody String?
+  status     DraftStatus   @default(DRAFT)
+  updatedAt  DateTime      @updatedAt
+
+  @@unique([pitchId, channel])
+}
+
+model Proposal {
+  id         String         @id @default(cuid())
+  ngoId      String
+  ngo        Ngo            @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  pitchId    String?
+  policyId   String?
+  policy     PricingPolicy? @relation(fields: [policyId], references: [id], onDelete: SetNull)
+  content    Json
+  /// Pricing is only ever filled from an approved PricingPolicy; otherwise null + "needs human approval".
+  approvedPricing Json?
+  status     DraftStatus    @default(DRAFT)
+  createdAt  DateTime       @default(now())
+  updatedAt  DateTime       @updatedAt
+}
+
+enum ExportMode {
+  INTERNAL
+  NGO_FACING
+}
+
+model ExportRecord {
+  id        String     @id @default(cuid())
+  ngoId     String
+  ngo       Ngo        @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  kind      String // full-audit-pdf | executive-summary-pdf | evidence-list | proposal | prospect-csv ...
+  mode      ExportMode
+  filePath  String?
+  createdAt DateTime   @default(now())
+}
+
+/// Append-only trail of material edits, reviews and approvals.
+model AuditLog {
+  id         String   @id @default(cuid())
+  entityType String
+  entityId   String
+  action     String
+  actor      String?
+  before     Json?
+  after      Json?
+  createdAt  DateTime @default(now())
+
+  @@index([entityType, entityId])
+}

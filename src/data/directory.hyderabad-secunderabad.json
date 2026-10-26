@@ -1,0 +1,300 @@
+{
+  "_comment": "Read from public NGO Darpan listing pages on 21 Oct 2026. Name, registration number, address, city and sectors are as shown there. No phone numbers, websites or emails are listed because the listing pages do not show them; run a Deep Audit to find them. Coordinates are area/city approximations added by the app, not addresses.",
+  "entries": [
+    {
+      "name": "Bhavishya Pradhath Foundation",
+      "city": "Hyderabad",
+      "address": "Banjara Hills, Hyderabad",
+      "darpanId": "U85100TG2019NPL136503",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Banjara Hills",
+      "cause": "Health & Family Welfare"
+    },
+    {
+      "name": "Heart and Stroke Foundation of India",
+      "city": "Hyderabad",
+      "address": "Level 1, am@10, MB Towers, 8-2-624/A/1, Road No 10, Banjara Hills",
+      "darpanId": "U85300TG2018NPL123861",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Banjara Hills",
+      "cause": "Health & Family Welfare"
+    },
+    {
+      "name": "Hrudaya Cure A Little Heart Foundation",
+      "city": "Hyderabad",
+      "address": "Flat No.2, First Floor, Prime Hill Apartment, 8-2-596/P/2, Road No.10, Banjara Hills",
+      "darpanId": "109/05",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Banjara Hills",
+      "cause": "Health & Family Welfare"
+    },
+    {
+      "name": "Genome Foundation",
+      "city": "Hyderabad",
+      "address": "Plot No 96, Flat No 402, Apoorva Towers, Road No 2, Banjara Hills, Hyderabad 500034",
+      "darpanId": "01-43436",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Banjara Hills",
+      "cause": "Health & Family Welfare"
+    },
+    {
+      "name": "Ghiasuddin Babukhan Charitable Trust",
+      "city": "Hyderabad",
+      "address": "8-2-595/2/A, Babukhan House, Road No.10, Banjara Hills, Hyderabad",
+      "darpanId": "142/sub-IV/03",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Banjara Hills",
+      "cause": "Education & Literacy"
+    },
+    {
+      "name": "Global Telangana Association",
+      "city": "Hyderabad",
+      "address": "8-2-293/82/A/89, Flat No 4, 4th Floor, Road Jubilee Hills, Shaikpet",
+      "darpanId": "175905",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Jubilee Hills",
+      "cause": "Education & Literacy; Health & Family Welfare"
+    },
+    {
+      "name": "Base Vision Foundation",
+      "city": "Hyderabad",
+      "address": "8-1-284/OU/489, OU Colony, Shaikpet, Jubilee Hills",
+      "darpanId": "140049",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Jubilee Hills",
+      "cause": "Education & Literacy; Health & Family Welfare; Human Rights"
+    },
+    {
+      "name": "Basic Research Education And Development Society",
+      "city": "Hyderabad",
+      "address": "Plot 1300A, Road Number 66, Jubilee Hills",
+      "darpanId": "1755",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Jubilee Hills",
+      "cause": "Children; Education & Literacy"
+    },
+    {
+      "name": "Advocates for Babies in Crisis Society",
+      "city": "Hyderabad",
+      "address": "8-2-293/82/A/175, Road no 13, Jubilee Hills, Hyderabad 500033",
+      "darpanId": "36 of 2014",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Jubilee Hills",
+      "cause": "Children"
+    },
+    {
+      "name": "Butta Foundation",
+      "city": "Hyderabad",
+      "address": "4/14, Butta House, Madhapur, Hyderabad 500081",
+      "darpanId": "682",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Madhapur",
+      "cause": "Art & Culture; Health & Family Welfare; Youth Affairs"
+    },
+    {
+      "name": "CJ Educational Society",
+      "city": "Hyderabad",
+      "address": "Plot 803, 5th Floor, Ayyappa Central Building, Hundred Feet Road, Madhapur",
+      "darpanId": "326",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Madhapur",
+      "cause": "Education & Literacy"
+    },
+    {
+      "name": "AIBFSIC Innovation Foundation",
+      "city": "Hyderabad",
+      "address": "1/C, 83/1, Raidurg Panmakta, 4th Floor, Madhapur, Shaikpet, Hyderabad 500081",
+      "darpanId": "U85499TS2024NPL186297",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Madhapur",
+      "cause": "Skill Development"
+    },
+    {
+      "name": "AIC-CR Rao CyLab Foundation",
+      "city": "Hyderabad",
+      "address": "C.R. Rao AIMSCS, UoH Campus, Prof. C.R. Rao Road, Gachibowli",
+      "darpanId": "U72200TS2024NPL181485",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Gachibowli",
+      "cause": "Science & Technology; Skill Development"
+    },
+    {
+      "name": "AIC-IIITH Foundation",
+      "city": "Hyderabad",
+      "address": "IIIT Hyderabad Campus, Survey no 25, Gachibowli, Hyderabad 500032",
+      "darpanId": "U73100TG2018NPL129117",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Gachibowli",
+      "cause": "Micro, Small & Medium Enterprises; Skill Development"
+    },
+    {
+      "name": "Deccan Development Society",
+      "city": "Hyderabad",
+      "address": "1-11-242/1, Flat No.101, Kishan Residency, St.No.5, Begumpet, Hyderabad",
+      "darpanId": "1529",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Begumpet",
+      "cause": "Rural Development; Agriculture; Women's Development"
+    },
+    {
+      "name": "Global Tree Foundation",
+      "city": "Hyderabad",
+      "address": "D No 6-3-879/B/2, 3rd Floor, G. Pulla Reddy Buildings, beside CM Camp Office, Begumpet, Hyderabad 500016",
+      "darpanId": "165/2023",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Begumpet"
+    },
+    {
+      "name": "CK Tharad Charitable Trust",
+      "city": "Hyderabad",
+      "address": "6-3-1186/5/B, Plot No. 4, Durga Lakshmi Subh, opp. JS Babu Silk, Begumpet",
+      "darpanId": "6/IV / 2023",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Begumpet"
+    },
+    {
+      "name": "A3 Society",
+      "city": "Hyderabad",
+      "address": "20-4-526/4, Khilwath, Charminar",
+      "darpanId": "57 of 2022",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "Charminar"
+    },
+    {
+      "name": "Guards Krupha Trust",
+      "city": "Secunderabad",
+      "address": "H. No. 3, Railway Colony, Picket, West Marredpally, Secunderabad 500026",
+      "darpanId": "25/2010",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "West Marredpally",
+      "cause": "Children; Education & Literacy; Health & Family Welfare"
+    },
+    {
+      "name": "Appuka Foundation Trust",
+      "city": "Secunderabad",
+      "address": "H.No. 3-9-55/56/57, Flat 201, Navkar Pride, Syed Jalal Garden, West Marredpally, Secunderabad 500026",
+      "darpanId": "231011113815472663",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "area": "West Marredpally",
+      "cause": "Education & Literacy"
+    },
+    {
+      "name": "Chitneni Foundation",
+      "city": "Secunderabad",
+      "address": "Flat 123, 10-3-150, East Secunderabad, 500026",
+      "darpanId": "U85300TG2021NPL153932",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER"
+    },
+    {
+      "name": "Butti Sarala Foundation and Charitable Trust",
+      "city": "Secunderabad",
+      "address": "T Y D-6, Railway Quarters, Tukaram Gate, North Lalaguda, Secunderabad",
+      "darpanId": "49/2020",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "cause": "Education & Literacy; Nutrition; Vocational Training"
+    },
+    {
+      "name": "Akscharayan TWWF",
+      "city": "Secunderabad",
+      "address": "12-5-35/A/9, Flat 4, Ballad Estates, Lalaguda, Tarnaka, Secunderabad",
+      "darpanId": "402",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "cause": "Education & Literacy; Environment & Forests; Women's Development"
+    },
+    {
+      "name": "Akshaya Lakshmi Goshala",
+      "city": "Secunderabad",
+      "address": "H. No. 7104/4A, Plot 73, Mallikarjuna Colony, Road No. 1, Balaji Enclave, Old Bowenpally, Secunderabad 500011",
+      "darpanId": "37/2015",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "cause": "Animal Husbandry; Environment & Forests"
+    },
+    {
+      "name": "C-Cube Trust",
+      "city": "Secunderabad",
+      "address": "H.No. 1-8-215/142, Satguru Building, Penderghast Road, Secunderabad 500003",
+      "darpanId": "60/IV/2013",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "cause": "Children; Differently Abled; Education & Literacy; Health & Family Welfare"
+    },
+    {
+      "name": "Abhinetri Arts Academy",
+      "city": "Secunderabad",
+      "address": "Seethaphal Mandi, Secunderabad",
+      "darpanId": "230 of 2004",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "cause": "Art & Culture"
+    },
+    {
+      "name": "Abhinav Social Trust",
+      "city": "Secunderabad",
+      "address": "Tiebalanagar, Secunderabad",
+      "darpanId": "1985",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER",
+      "cause": "Education & Literacy; Health & Family Welfare; Women's Development"
+    },
+    {
+      "name": "A3 Connect Trust",
+      "city": "Secunderabad",
+      "address": "34422/26, Raghavendra Nagar Colony, Sainikpuri, Hyderabad",
+      "darpanId": "147/IV/2023",
+      "darpanStatus": "VERIFIED",
+      "sourceNote": "NGO Darpan listing (ngodarpan.gov.in), read 21 Oct 2026; registration number as shown there",
+      "source": "STARTER"
+    }
+  ]
+}
